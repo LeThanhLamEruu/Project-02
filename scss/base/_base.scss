@@ -11,4 +11,33 @@ html {
 body {
     font-size: 1.6rem;
     font-family: Gordita, sans-serif;
+    color: var(--text-color);
+}
+
+.icon {
+    filter: var(--icon-color)
+}
+
+a {
+    font-family: inherit;
+    color: inherit;
+    text-decoration: none;
+}
+
+button {
+    background: transparent;
+}
+
+button,
+textarea,
+label,
+input,
+select,
+img,
+a {
+    font-family: inherit;
+    color: inherit;
+    border: none;
+    outline: none;
+    padding: 0;
 }
