@@ -11,17 +11,14 @@ html {
 body {
     font-size: 1.6rem;
     font-family: Gordita, sans-serif;
-    color: var(--text-color);
-    background: var(--body-bg);
+    background: var(--body-bg-color);
 }
 
 .icon {
-    filter: var(--icon-color)
+    filter: var(--icon-color);
 }
 
 a {
-    font-family: inherit;
-    color: inherit;
     text-decoration: none;
 }
 
@@ -29,13 +26,13 @@ button {
     background: transparent;
 }
 
-button,
-textarea,
-label,
-input,
-select,
+a,
 img,
-a {
+label,
+select,
+textarea,
+button,
+input {
     font-family: inherit;
     color: inherit;
     border: none;

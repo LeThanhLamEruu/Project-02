@@ -4,31 +4,22 @@
     display: flex;
     align-items: center;
     gap: 14px;
-    cursor: pointer;
 
-    @include abstracts.breakpoint(lg) {
-        gap: 10px;
-        margin-left: 40px;
-    }
+    &__img {
+        width: 32px;
+        height: 32px;
 
-    @include abstracts.breakpoint(sm) {
-        margin-left: 0;
+        @include abstracts.breakpoint(lg) {
+            width: 24px;
+            height: 24px;
+        }
     }
 
     &__title {
+        color: var(--text-color);
         font-size: 2.2rem;
         font-style: normal;
         font-weight: 700;
         line-height: 145.455%;
-
-        @include abstracts.breakpoint(lg) {
-            font-size: 1.8rem;
-        }
-    }
-
-    &__img {
-        @include abstracts.breakpoint(lg) {
-            width: 24px;
-        }
     }
 }

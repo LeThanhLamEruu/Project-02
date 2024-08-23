@@ -1,13 +1,19 @@
 @use "../abstracts";
 
 html.dark {
-  --text-color: #fff;
-  --icon-color: brightness(0) saturate(100%) invert(100%) sepia(4%) saturate(16%) hue-rotate(10deg) brightness(103%) contrast(103%);
+    --text-color: #FFFFFF;
+    --icon-color: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7492%) hue-rotate(49deg) brightness(98%) contrast(104%);
 
-  --header-bg-color: #171C28;
-  --body-bg: #292e39;
-  --topact-btn-bg-color: #292E39;
-  --topact-group-shadow: rgba(0, 0, 0, 0.20);
-  --topact-group-divider: #ededf6;
+    --header-bg-color: #171C28;
+    --topact-bg-group: #292E39;
+    --topact-bg-avatar: #DFD2FA;
+    --body-bg-color: #292E39;
 
+    --topact-group-shadow: rgba(0, 0, 0, 0.20);
+    --topact-user-shadow: rgba(0, 0, 0, 0.08);
+    --topact-divider: #EDEDF6;
+
+    @include abstracts.breakpoint(md) {
+        --header-bg-color: #171C28;
+    }
 }
