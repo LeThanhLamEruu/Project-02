@@ -10,6 +10,8 @@
 }
 
 .top-more {
+    width: 12px;
+    height: 16px;
     display: none;
 
     @include abstracts.breakpoint(lg) {
