@@ -4,20 +4,17 @@
 
     padding-top: 54px;
     width: min(1240px, 100%);
-    // opacity: 0;
-    // visibility: hidden;
+    opacity: 0;
+    visibility: hidden;
     transition: opacity 0.3s ease, visibility 0.3s ease;
     cursor: pointer;
 
 
     &__inner {
         --inner-padding: 30px;
-        --inner-height: min(582px, (100vh - 158px));
 
         position: relative;
-
-        padding: 30px;
-        max-height: var(--inner-height);
+        padding: var(--inner-padding);
 
         border-radius: 20px;
         background: var(--dropdown-bg-color);
@@ -35,28 +32,29 @@
     }
 }
 
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: var(--menu-column-scroll-color);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    height: 10%;
+    box-shadow: inset 0 0 6px var(--menu-column-scroll-opa);
+    border-radius: 5px;
+}
+
 .top-menu {
-    max-height: calc(var(--inner-height) - (var(--inner-padding) * 2));
+    --main-col-width: 292px;
+    position: relative;
 
     &__main {
-        width: 292px;
-        max-height: calc(var(--inner-height) - (var(--inner-padding) * 2));
+        width: var(--main-col-width);
+        height: calc(min(582px, (100vh - 158px)) - (var(--inner-padding) * 2));
         overflow-y: auto;
-
-        &::-webkit-scrollbar {
-            width: 10px;
-        }
-
-        &::-webkit-scrollbar-track {
-            background-color: var(--menu-column-scroll-color);
-            border-radius: 4px;
-        }
-
-        &::-webkit-scrollbar-thumb {
-            height: 10%;
-            box-shadow: inset 0 0 6px var(--menu-column-scroll-opa);
-            border-radius: 4px;
-        }
     }
 }
 
@@ -77,7 +75,7 @@
     }
 
     &__icon-1 {
-        object-fit: cover;
+        object-fit: contain;
         width: 30px;
         height: 30px;
     }
@@ -87,7 +85,7 @@
         right: 0;
         bottom: 0;
 
-        object-fit: cover;
+        object-fit: contain;
         width: 24px;
         height: 24px;
 
@@ -96,6 +94,18 @@
 
     &__list {
         margin-top: 19px;
+    }
+
+    &__item {
+        &--active .sub-menu {
+            display: grid;
+        }
+    }
+
+    &__item--active > &__link,
+    &__item:hover > &__link {
+        color: #0071dc;
+        font-weight: 500;
     }
 
     &__heading {
@@ -113,12 +123,16 @@
         font-size: 1.4rem;
         line-height: 142.857%;
         color: var(--menu-column-text-color);
-        transition: color 0.3s ease, transform 0.3s ease, font-weight 0.3s ease;
-
-        &:hover {
-            font-weight: 500;
-            color: #0071DC;
-        }
     }
+}
+
+.sub-menu {
+    position: absolute;
+    inset: 0 0 0 var(--main-col-width);
+    padding-left: var(--inner-padding);
+    overflow-y: auto;
+    pointer-events: fill;
+    display: none;
+    grid-template-columns: repeat(3, 1fr);
 
 }

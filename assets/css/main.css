@@ -1235,15 +1235,15 @@ input {
   left: 0;
   padding-top: 54px;
   width: min(1240px, 100%);
+  opacity: 0;
+  visibility: hidden;
   transition: opacity 0.3s ease, visibility 0.3s ease;
   cursor: pointer;
 }
 .dropdown__inner {
   --inner-padding: 30px;
-  --inner-height: min(582px, (100vh - 158px));
   position: relative;
-  padding: 30px;
-  max-height: var(--inner-height);
+  padding: var(--inner-padding);
   border-radius: 20px;
   background: var(--dropdown-bg-color);
   box-shadow: 0px 40px 90px 20px var(--dropdown-shadow);
@@ -1257,25 +1257,29 @@ input {
   filter: var(--dropdown-arrow-color);
 }
 
-.top-menu {
-  max-height: calc(var(--inner-height) - var(--inner-padding) * 2);
-}
-.top-menu__main {
-  width: 292px;
-  max-height: calc(var(--inner-height) - var(--inner-padding) * 2);
-  overflow-y: auto;
-}
-.top-menu__main::-webkit-scrollbar {
+::-webkit-scrollbar {
   width: 10px;
 }
-.top-menu__main::-webkit-scrollbar-track {
+
+::-webkit-scrollbar-track {
   background-color: var(--menu-column-scroll-color);
-  border-radius: 4px;
+  border-radius: 5px;
 }
-.top-menu__main::-webkit-scrollbar-thumb {
+
+::-webkit-scrollbar-thumb {
   height: 10%;
   box-shadow: inset 0 0 6px var(--menu-column-scroll-opa);
-  border-radius: 4px;
+  border-radius: 5px;
+}
+
+.top-menu {
+  --main-col-width: 292px;
+  position: relative;
+}
+.top-menu__main {
+  width: var(--main-col-width);
+  height: calc(min(582px, 100vh - 158px) - var(--inner-padding) * 2);
+  overflow-y: auto;
 }
 
 .menu-column {
@@ -1292,7 +1296,7 @@ input {
   flex: 1;
 }
 .menu-column__icon-1 {
-  object-fit: cover;
+  object-fit: contain;
   width: 30px;
   height: 30px;
 }
@@ -1300,13 +1304,20 @@ input {
   position: absolute;
   right: 0;
   bottom: 0;
-  object-fit: cover;
+  object-fit: contain;
   width: 24px;
   height: 24px;
   filter: var(--menu-column-icon-color);
 }
 .menu-column__list {
   margin-top: 19px;
+}
+.menu-column__item--active .sub-menu {
+  display: grid;
+}
+.menu-column__item--active > .menu-column__link, .menu-column__item:hover > .menu-column__link {
+  color: #0071dc;
+  font-weight: 500;
 }
 .menu-column__heading {
   margin-top: 4px;
@@ -1322,11 +1333,16 @@ input {
   font-size: 1.4rem;
   line-height: 142.857%;
   color: var(--menu-column-text-color);
-  transition: color 0.3s ease, transform 0.3s ease, font-weight 0.3s ease;
 }
-.menu-column__link:hover {
-  font-weight: 500;
-  color: #0071DC;
+
+.sub-menu {
+  position: absolute;
+  inset: 0 0 0 var(--main-col-width);
+  padding-left: var(--inner-padding);
+  overflow-y: auto;
+  pointer-events: fill;
+  display: none;
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .topact__btn, .topact__group, .topact, .navbar__link, .navbar__list, .top-bar {
