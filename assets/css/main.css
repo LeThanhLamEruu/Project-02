@@ -1210,6 +1210,7 @@ input {
   display: flex;
   align-items: center;
   gap: 14px;
+  cursor: pointer;
 }
 .logo__img {
   width: 32px;
@@ -1227,6 +1228,30 @@ input {
   font-style: normal;
   font-weight: 700;
   line-height: 145.455%;
+}
+
+.dropdown {
+  position: absolute;
+  left: 0;
+  padding-top: 54px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+.dropdown__inner {
+  position: relative;
+  border-radius: 20px;
+  background: var(--dropdown-bg-color);
+  box-shadow: 0px 40px 90px 20px var(--dropdown-shadow);
+  padding: 30px;
+}
+.dropdown__inner::before {
+  content: url("../icons/dropdownarrow.svg");
+  position: absolute;
+  top: -13px;
+  left: var(--arrow-left-pos);
+  translate: -50%;
+  filter: var(--dropdown-arrow-color);
 }
 
 .topact__btn, .topact__group, .topact, .navbar__link, .navbar__list, .top-bar {
@@ -1256,6 +1281,7 @@ input {
 }
 
 .top-bar {
+  position: relative;
   padding: 30px 0;
 }
 @media (max-width: 991.98px) {
@@ -1273,6 +1299,29 @@ input {
 .navbar {
   margin-left: 144px;
 }
+.navbar__item:first-child a {
+  padding-left: 0;
+}
+.navbar__item:last-child a {
+  padding-right: 0;
+}
+.navbar__item:hover .dropdown {
+  opacity: 1;
+  visibility: visible;
+}
+.navbar__link {
+  gap: 6px;
+  height: 50px;
+  padding: 0 15px;
+  color: var(--text-color);
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 146.667%;
+}
+.navbar__arrowd {
+  margin-top: 3px;
+}
 @media (max-width: 1199.98px) {
   .navbar {
     margin-left: auto;
@@ -1283,20 +1332,6 @@ input {
   .navbar {
     display: none;
   }
-}
-.navbar__list {
-  gap: 30px;
-}
-.navbar__link {
-  gap: 6px;
-  color: var(--text-color);
-  font-size: 1.5rem;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 146.667%;
-}
-.navbar__arrowd {
-  margin-top: 3px;
 }
 
 .topact {
@@ -1316,6 +1351,10 @@ input {
   background: var(--topact-bg-group);
   box-shadow: 0px 20px 60px 10px var(--topact-group-shadow);
   padding: 10px 20px;
+  cursor: pointer;
+}
+.topact__group:hover {
+  outline: solid 2px var(--topact-bg-group);
 }
 @media (max-width: 767.98px) {
   .topact__group {
@@ -1334,6 +1373,7 @@ input {
   color: var(--text-color);
   gap: 10px;
   background: var(--topact-bg-group);
+  cursor: pointer;
 }
 .topact__divider {
   width: 1px;
@@ -1347,6 +1387,10 @@ input {
   border-radius: 8px;
   background: var(--topact-bg-avatar);
   box-shadow: 0px 4px 14px 2px var(--topact-user-shadow);
+  cursor: pointer;
+}
+.topact__avatar:hover {
+  outline: 2px solid #fff;
 }
 
 html {
@@ -1359,6 +1403,8 @@ html {
   --topact-group-shadow: rgba(237, 237, 246, 0.20);
   --topact-user-shadow: rgba(0, 0, 0, 0.08);
   --topact-divider: #EDEDF6;
+  --dropdown-bg-color: #fff;
+  --dropdown-shadow: rgba(200, 200, 200, 0.40);
 }
 @media (max-width: 767.98px) {
   html {
@@ -1376,6 +1422,9 @@ html.dark {
   --topact-group-shadow: rgba(0, 0, 0, 0.20);
   --topact-user-shadow: rgba(0, 0, 0, 0.08);
   --topact-divider: #EDEDF6;
+  --dropdown-bg-color: #2f3441;
+  --dropdown-shadow: rgba(23, 28, 40, 0.40);
+  --dropdown-arrow-color: brightness(0) saturate(100%) invert(21%) sepia(5%) saturate(2067%) hue-rotate(186deg) brightness(91%) contrast(95%);
 }
 @media (max-width: 767.98px) {
   html.dark {

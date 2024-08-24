@@ -1,0 +1,10 @@
+{
+    "editor.wordWrap": "on",
+    "editor.wrappingIndent": "none",
+    "editor.wrappingStrategy": "advanced",
+    "notebook.output.wordWrap": true,
+    "chat.editor.wordWrap": "on",
+    "html.format.wrapAttributes": "preserve-aligned",
+    "prettier.proseWrap": "always",
+    "diffEditor.wordWrap": "inherit"
+}

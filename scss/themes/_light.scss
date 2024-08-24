@@ -6,12 +6,16 @@ html {
 
     --header-bg-color: #EEEEEE;
     --topact-bg-group: #FFF;
+
     --topact-bg-avatar: #DFD2FA;
     --body-bg-color: #F6F6F6;
 
     --topact-group-shadow: rgba(237, 237, 246, 0.20);
     --topact-user-shadow: rgba(0, 0, 0, 0.08);
     --topact-divider: #EDEDF6;
+
+    --dropdown-bg-color: #fff;
+    --dropdown-shadow: rgba(200, 200, 200, 0.40);
 
     @include abstracts.breakpoint(md) {
         --header-bg-color: #FFFFFF;

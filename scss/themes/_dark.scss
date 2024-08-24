@@ -13,6 +13,10 @@ html.dark {
     --topact-user-shadow: rgba(0, 0, 0, 0.08);
     --topact-divider: #EDEDF6;
 
+    --dropdown-bg-color: #2f3441;
+    --dropdown-shadow: rgba(23, 28, 40, 0.40);
+    --dropdown-arrow-color: brightness(0) saturate(100%) invert(21%) sepia(5%) saturate(2067%) hue-rotate(186deg) brightness(91%) contrast(95%);
+
     @include abstracts.breakpoint(md) {
         --header-bg-color: #171C28;
     }
