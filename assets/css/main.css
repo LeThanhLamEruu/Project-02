@@ -1239,6 +1239,8 @@ input {
 }
 
 .top-more {
+  width: 12px;
+  height: 16px;
   display: none;
 }
 @media (max-width: 991.98px) {
