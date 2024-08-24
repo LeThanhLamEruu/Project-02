@@ -1,18 +1,27 @@
 .dropdown {
     position: absolute;
     left: 0;
+
     padding-top: 54px;
-    opacity: 0;
-    visibility: hidden;
+    width: min(1240px, 100%);
+    // opacity: 0;
+    // visibility: hidden;
     transition: opacity 0.3s ease, visibility 0.3s ease;
+    cursor: pointer;
 
 
     &__inner {
+        --inner-padding: 30px;
+        --inner-height: min(582px, (100vh - 158px));
+
         position: relative;
+
+        padding: 30px;
+        max-height: var(--inner-height);
+
         border-radius: 20px;
         background: var(--dropdown-bg-color);
         box-shadow: 0px 40px 90px 20px var(--dropdown-shadow);
-        padding: 30px;
 
         &::before {
             content: url("../icons/dropdownarrow.svg");
@@ -20,7 +29,96 @@
             top: -13px;
             left: var(--arrow-left-pos);
             translate: -50%;
+
             filter: var(--dropdown-arrow-color)
         }
     }
+}
+
+.top-menu {
+    max-height: calc(var(--inner-height) - (var(--inner-padding) * 2));
+
+    &__main {
+        width: 292px;
+        max-height: calc(var(--inner-height) - (var(--inner-padding) * 2));
+        overflow-y: auto;
+
+        &::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        &::-webkit-scrollbar-track {
+            background-color: var(--menu-column-scroll-color);
+            border-radius: 4px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            height: 10%;
+            box-shadow: inset 0 0 6px var(--menu-column-scroll-opa);
+            border-radius: 4px;
+        }
+    }
+}
+
+.menu-column {
+    display: flex;
+    gap: 14px;
+
+    &__icons {
+        position: relative;
+        flex-shrink: 0;
+
+        width: 36px;
+        height: 36px;
+    }
+
+    &__content {
+        flex: 1;
+    }
+
+    &__icon-1 {
+        object-fit: cover;
+        width: 30px;
+        height: 30px;
+    }
+
+    &__icon-2 {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+
+        object-fit: cover;
+        width: 24px;
+        height: 24px;
+
+        filter: var(--menu-column-icon-color);
+    }
+
+    &__list {
+        margin-top: 19px;
+    }
+
+    &__heading {
+        margin-top: 4px;
+        font-size: 1.6rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 150%;
+        color: var(--menu-column-text-color);
+    }
+
+    &__link {
+        display: block;
+        padding: 7px 0;
+        font-size: 1.4rem;
+        line-height: 142.857%;
+        color: var(--menu-column-text-color);
+        transition: color 0.3s ease, transform 0.3s ease, font-weight 0.3s ease;
+
+        &:hover {
+            font-weight: 500;
+            color: #0071DC;
+        }
+    }
+
 }

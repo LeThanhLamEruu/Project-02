@@ -5,6 +5,7 @@ html.dark {
     --icon-color: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7492%) hue-rotate(49deg) brightness(98%) contrast(104%);
 
     --header-bg-color: #171C28;
+    --header-shadow: rgba(0, 0, 0, 0.20);
     --topact-bg-group: #292E39;
     --topact-bg-avatar: #DFD2FA;
     --body-bg-color: #292E39;
@@ -16,6 +17,12 @@ html.dark {
     --dropdown-bg-color: #2f3441;
     --dropdown-shadow: rgba(23, 28, 40, 0.40);
     --dropdown-arrow-color: brightness(0) saturate(100%) invert(21%) sepia(5%) saturate(2067%) hue-rotate(186deg) brightness(91%) contrast(95%);
+
+    --top-menu-border-color: #171C28;
+    --menu-column-icon-color: brightness(0) saturate(100%) invert(90%) sepia(3%) saturate(899%) hue-rotate(205deg) brightness(111%) contrast(95%);
+    --menu-column-text-color: #B9BABE;
+    --menu-column-scroll-color: #B9BABE;
+    --menu-column-scroll-opa: rgba(0, 0, 0, 0.4);
 
     @include abstracts.breakpoint(md) {
         --header-bg-color: #171C28;
