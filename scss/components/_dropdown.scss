@@ -62,6 +62,10 @@
     display: flex;
     gap: 14px;
 
+    + .menu-column {
+        margin-top: 22px;
+    }
+
     &__icons {
         position: relative;
         flex-shrink: 0;
@@ -131,8 +135,7 @@
     inset: 0 0 0 var(--main-col-width);
     padding-left: var(--inner-padding);
     overflow-y: auto;
-    pointer-events: fill;
+
     display: none;
     grid-template-columns: repeat(3, 1fr);
-
 }
