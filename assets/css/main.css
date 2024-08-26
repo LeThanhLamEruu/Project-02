@@ -1273,12 +1273,13 @@ input {
 }
 
 .top-menu {
+  --max-height: calc(min(582px, (100vh - 158px)) - (var(--inner-padding) * 2));
   --main-col-width: 292px;
   position: relative;
 }
 .top-menu__main {
   width: var(--main-col-width);
-  height: calc(min(582px, 100vh - 158px) - var(--inner-padding) * 2);
+  height: var(--max-height);
   overflow-y: auto;
 }
 
@@ -1294,6 +1295,11 @@ input {
   flex-shrink: 0;
   width: 36px;
   height: 36px;
+}
+@media (max-width: 1199.98px) {
+  .menu-column__icons {
+    display: none;
+  }
 }
 .menu-column__content {
   flex: 1;
@@ -1345,6 +1351,14 @@ input {
   overflow-y: auto;
   display: none;
   grid-template-columns: repeat(3, 1fr);
+}
+.sub-menu--not-main {
+  position: initial;
+  inset: initial;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  height: var(--max-height);
+  padding-left: 0;
 }
 
 .topact__btn, .topact__group, .topact, .navbar__link, .navbar__list, .top-bar {

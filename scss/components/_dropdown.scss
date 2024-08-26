@@ -1,3 +1,5 @@
+@use "../abstracts";
+
 .dropdown {
     position: absolute;
     left: 0;
@@ -48,12 +50,13 @@
 }
 
 .top-menu {
+    --max-height: calc(min(582px, (100vh - 158px)) - (var(--inner-padding) * 2));
     --main-col-width: 292px;
     position: relative;
 
     &__main {
         width: var(--main-col-width);
-        height: calc(min(582px, (100vh - 158px)) - (var(--inner-padding) * 2));
+        height: var(--max-height);
         overflow-y: auto;
     }
 }
@@ -72,6 +75,10 @@
 
         width: 36px;
         height: 36px;
+
+        @include abstracts.breakpoint(xl) {
+            display: none;
+        }
     }
 
     &__content {
@@ -100,10 +107,8 @@
         margin-top: 19px;
     }
 
-    &__item {
-        &--active .sub-menu {
-            display: grid;
-        }
+    &__item--active .sub-menu {
+        display: grid;
     }
 
     &__item--active > &__link,
@@ -138,4 +143,13 @@
 
     display: none;
     grid-template-columns: repeat(3, 1fr);
+
+    &--not-main {
+        position: initial;
+        inset: initial;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        height: var(--max-height);
+        padding-left: 0;
+    }
 }
