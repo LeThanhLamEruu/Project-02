@@ -272,6 +272,13 @@
         cursor: pointer;
     }
 
+    &__title {
+        font-size: 1.5rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 146.667%;
+    }
+
     &__divider {
         width: 1px;
         height: 30px;
