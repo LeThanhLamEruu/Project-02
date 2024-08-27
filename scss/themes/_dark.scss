@@ -27,4 +27,8 @@ html.dark {
     @include abstracts.breakpoint(md) {
         --header-bg-color: #171C28;
     }
+
+    @include abstracts.breakpoint(lg) {
+        --nabar-bg-color: #292E39;
+    }
 }

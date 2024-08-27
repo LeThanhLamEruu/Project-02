@@ -6,10 +6,13 @@
 
     padding-top: 54px;
     width: min(1240px, 100%);
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.3s ease, visibility 0.3s ease;
+    display: none;
     cursor: pointer;
+
+    @include abstracts.breakpoint(lg) {
+        position: initial;
+        padding-top: 0;
+    }
 
 
     &__inner {
@@ -31,16 +34,31 @@
 
             filter: var(--dropdown-arrow-color)
         }
+
+        @include abstracts.breakpoint(lg) {
+            padding: 0 40px;
+            border-radius: 0;
+            background: transparent;
+            box-shadow: none;
+
+            &::before {
+                content: none;
+            }
+        }
+
+        @include abstracts.breakpoint(sm) {
+            padding: 0 20px;
+        }
     }
 }
 
 ::-webkit-scrollbar {
-    width: 10px;
+    width: 6px;
 }
 
 ::-webkit-scrollbar-track {
     background-color: var(--menu-column-scroll-color);
-    border-radius: 5px;
+    border-radius: 3px;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -58,6 +76,12 @@
         width: var(--main-col-width);
         height: var(--max-height);
         overflow-y: auto;
+
+        @include abstracts.breakpoint(lg) {
+            width: 100%;
+            height: auto;
+            margin-top: -16px;
+        }
     }
 }
 
@@ -78,6 +102,10 @@
 
         @include abstracts.breakpoint(xl) {
             display: none;
+        }
+
+        @include abstracts.breakpoint(lg) {
+            display: block;
         }
     }
 
@@ -124,6 +152,9 @@
         font-weight: 500;
         line-height: 150%;
         color: var(--menu-column-text-color);
+        @include abstracts.breakpoint(lg) {
+            margin-bottom: 20px;
+        }
     }
 
     &__link {
@@ -151,5 +182,23 @@
         grid-template-columns: repeat(4, 1fr);
         height: var(--max-height);
         padding-left: 0;
+
+        @include abstracts.breakpoint(lg) {
+            grid-template-columns: repeat(1, 1fr);
+            height: auto;
+        }
+    }
+
+    @include abstracts.breakpoint(lg) {
+        position: initial;
+        grid-template-columns: repeat(1, 1fr);
+        padding-left: 0;
+        height: auto;
+    }
+
+    &__column + .sub-menu__column {
+        @include abstracts.breakpoint(lg) {
+            margin-top: 22px;
+        }
     }
 }

@@ -25,4 +25,8 @@ html {
     @include abstracts.breakpoint(md) {
         --header-bg-color: #FFFFFF;
     }
+
+    @include abstracts.breakpoint(lg) {
+        --nabar-bg-color: #FFFFFF;
+    }
 }

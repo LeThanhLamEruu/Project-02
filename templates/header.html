@@ -1,7 +1,7 @@
 <div class="container">
     <div class="top-bar">
         <!-- More -->
-        <div class="top-more">
+        <div class="top-more js-toggle" toggle-target="#navbar">
             <img src="./assets/icons/more.svg" alt="" class="icon top-more__icon">
         </div>
         <!-- Logo -->
@@ -11,12 +11,27 @@
         </div>
 
         <!-- Navbar -->
-        <nav class="navbar">
+        <nav id="navbar" class="navbar show">
+            <button class="navbar__close-btn js-toggle" toggle-target="#navbar">
+                <img src="./assets/icons/arrowdl.svg" alt="" class="icon navbar__close-icon">
+            </button>
+            <a href="#!" class="navbar-btn d-none d-md-flex">
+                <img src="./assets/icons/buy.svg" alt="" class="icon navbar-btn__icon">
+                <span class="navbar-btn__title">Card</span>
+                <span class="navbar-btn__qnt">3</span>
+            </a>
+
+            <a href="#!" class="navbar-btn d-none d-md-flex">
+                <img src="../assets/icons/heart.svg" alt="" class="icon navbar-btn__icon">
+                <span class="navbar-btn__title">Favorite</span>
+                <span class="navbar-btn__qnt">3</span>
+            </a>
+
             <ul class="navbar__list js-dropdown-list">
 
                 <!-- Navbar item 1 -------------------------------------------------------->
                 <li class="navbar__item">
-                    <a href="" class="navbar__link">
+                    <a href="#!" class="navbar__link">
                         Departments
                         <img src="./assets/imgs/arrowd.png" alt="" class="icon navbar__arrowd">
                     </a>
@@ -29,7 +44,7 @@
                                     <div class="menu-column">
 
                                         <!-- Menu icon -->
-                                        <div class="menu-column__icons">
+                                        <div class="menu-column__icons d-lg-none">
                                             <img src="./assets/icons/categories/cate1-1.svg" alt=""
                                                  class="menu-column__icon-1">
                                             <img src="./assets/icons/categories/cate1-2.svg" alt=""
@@ -37,7 +52,7 @@
                                         </div>
                                         <!-- Menu content -->
                                         <div class="menu-column__content">
-                                            <h2 class="menu-column__heading">
+                                            <h2 class="menu-column__heading d-lg-none">
                                                 <a href="#!">All Departments
                                                 </a>
                                             </h2>
@@ -1120,7 +1135,7 @@
 
                 <!-- Navbar item 2 ----------------------------------------------------------->
                 <li class="navbar__item">
-                    <a href="" class="navbar__link">
+                    <a href="#!" class="navbar__link">
                         Groceries
                         <img src="./assets/imgs/arrowd.png" alt="" class="icon navbar__arrowd">
                     </a>
@@ -1577,7 +1592,7 @@
 
                 <!-- Navbar item 3--------------------------------------------------------- -->
                 <li class="navbar__item">
-                    <a href="" class="navbar__link">
+                    <a href="#!" class="navbar__link">
                         Beauties
                         <img src="./assets/imgs/arrowd.png" alt="" class="icon navbar__arrowd">
                     </a>
@@ -2032,6 +2047,7 @@
                 </li>
             </ul>
         </nav>
+        <div class="navbar__overlay js-toggle" toggle-target="#navbar"></div>
 
         <!-- Actions -------------------------------------------------------------------->
         <div class="topact">
