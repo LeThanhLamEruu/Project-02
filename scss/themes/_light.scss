@@ -24,11 +24,11 @@ html {
 
     --slider-text-color: #fff;
 
-    @include abstracts.breakpoint(md) {
+    @include abstracts.screen(md) {
         --header-bg-color: #FFFFFF;
     }
 
-    @include abstracts.breakpoint(lg) {
+    @include abstracts.screen(lg) {
         --nabar-bg-color: #FFFFFF;
     }
 }

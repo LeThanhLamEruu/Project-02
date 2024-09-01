@@ -27,11 +27,11 @@ html.dark {
     --slider-text-color: #fff;
 
 
-    @include abstracts.breakpoint(md) {
+    @include abstracts.screen(md) {
         --header-bg-color: #171C28;
     }
 
-    @include abstracts.breakpoint(lg) {
+    @include abstracts.screen(lg) {
         --nabar-bg-color: #292E39;
     }
 }
