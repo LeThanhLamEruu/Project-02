@@ -176,6 +176,21 @@ input {
   padding: 0;
 }
 
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--menu-column-scroll-color);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb {
+  height: 10%;
+  box-shadow: inset 0 0 6px var(--menu-column-scroll-opa);
+  border-radius: 5px;
+}
+
 .row > *, .container-fluid, .container {
   padding-left: calc(var(--grid-gutters-x) * 0.5);
   padding-right: calc(var(--grid-gutters-x) * 0.5);
@@ -1549,21 +1564,6 @@ input {
   }
 }
 
-::-webkit-scrollbar {
-  width: 6px;
-}
-
-::-webkit-scrollbar-track {
-  background-color: var(--menu-column-scroll-color);
-  border-radius: 3px;
-}
-
-::-webkit-scrollbar-thumb {
-  height: 10%;
-  box-shadow: inset 0 0 6px var(--menu-column-scroll-opa);
-  border-radius: 5px;
-}
-
 .top-menu {
   --max-height: calc(min(582px, (100vh - 158px)) - (var(--inner-padding) * 2));
   --main-col-width: 292px;
@@ -1578,7 +1578,6 @@ input {
   .top-menu__main {
     width: 100%;
     height: auto;
-    margin-top: -16px;
   }
 }
 
@@ -1624,6 +1623,11 @@ input {
 }
 .menu-column__list {
   margin-top: 19px;
+}
+@media (max-width: 991.98px) {
+  .menu-column__list {
+    margin-top: 0;
+  }
 }
 .menu-column__item--active .sub-menu {
   display: grid;
@@ -1689,6 +1693,94 @@ input {
   }
 }
 
+.slideshow {
+  position: relative;
+  margin: 40px 0;
+  z-index: 0;
+}
+@media (max-width: 767.98px) {
+  .slideshow {
+    margin: 30px 0;
+  }
+}
+.slideshow__inner {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+.slideshow__item {
+  position: relative;
+  flex-shrink: 0;
+  width: 100%;
+  padding-top: 34%;
+}
+@media (max-width: 767.98px) {
+  .slideshow__item {
+    padding-top: 50%;
+  }
+}
+.slideshow__img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  object-fit: cover;
+}
+.slideshow__page {
+  position: absolute;
+  gap: 20px;
+  bottom: 10%;
+  left: 5.2%;
+  width: 12.8%;
+  display: flex;
+  align-items: center;
+}
+.slideshow__num {
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 144.444%;
+  color: var(--slider-text-color);
+}
+@media (max-width: 767.98px) {
+  .slideshow__num {
+    font-size: 1.4rem;
+    line-height: 142.857%;
+  }
+}
+.slideshow__slider {
+  position: relative;
+  width: 100%;
+  height: 4px;
+  flex-shrink: 0;
+  background: var(--slider-text-color);
+}
+.slideshow__slider::before, .slideshow__slider::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  translate: 0 -50%;
+  width: 14px;
+  height: 14px;
+  border: 4px solid var(--slider-text-color);
+  border-radius: 50%;
+}
+@media (max-width: 767.98px) {
+  .slideshow__slider::before, .slideshow__slider::after {
+    border: 3px solid var(--slider-text-color);
+  }
+}
+.slideshow__slider::before {
+  left: 0;
+  translate: -95% -50%;
+}
+.slideshow__slider::after {
+  right: 0;
+  translate: 99% -50%;
+}
+
 .topact__btn, .topact__group, .topact, .navbar__link, .navbar__list, .top-bar {
   display: flex;
   align-items: center;
@@ -1722,6 +1814,7 @@ input {
 
 .top-bar {
   position: relative;
+  z-index: 5;
   padding: 30px 0;
 }
 @media (max-width: 991.98px) {
@@ -1738,6 +1831,51 @@ input {
 
 .navbar {
   margin-left: 129px;
+}
+@media (max-width: 1199.98px) {
+  .navbar {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media (max-width: 991.98px) {
+  .navbar {
+    position: fixed;
+    inset: 0 50% 0 0;
+    z-index: 10;
+    margin-left: 0;
+    padding: 20px 0;
+    border-radius: 0rem 2rem 2rem 0rem;
+    background: var(--nabar-bg-color);
+    translate: -100%;
+    transition: translate 0.5s;
+  }
+  .navbar.show {
+    translate: 0;
+  }
+  .navbar.show ~ .navbar__overlay {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+@media (max-width: 575.98px) {
+  .navbar {
+    inset: 0 20% 0 0;
+  }
+}
+.navbar__overlay {
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity, visibility;
+  transition-duration: 0.5s;
+}
+@media (max-width: 991.98px) {
+  .navbar__overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 8;
+    background: rgba(0, 0, 0, 0.4);
+  }
 }
 .navbar__close-btn {
   display: none;
@@ -1781,9 +1919,9 @@ input {
   .navbar__list {
     flex-direction: column;
     align-items: flex-start;
+    height: calc(100% - 40px);
     overflow-y: auto;
     overscroll-behavior: contain;
-    height: calc(100% - 40px);
   }
 }
 @media (max-width: 767.98px) {
@@ -1851,51 +1989,6 @@ input {
 .navbar__item--active .navbar__arrowd {
   rotate: 0deg;
 }
-@media (max-width: 1199.98px) {
-  .navbar {
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-@media (max-width: 991.98px) {
-  .navbar {
-    position: fixed;
-    inset: 0 50% 0 0;
-    z-index: 10;
-    margin-left: 0;
-    padding: 20px 0;
-    border-radius: 0rem 2rem 2rem 0rem;
-    background: var(--nabar-bg-color);
-    translate: -100%;
-    transition: translate 0.5s;
-  }
-  .navbar.show {
-    translate: 0;
-  }
-  .navbar.show ~ .navbar__overlay {
-    visibility: visible;
-    opacity: 1;
-  }
-}
-@media (max-width: 575.98px) {
-  .navbar {
-    inset: 0 20% 0 0;
-  }
-}
-.navbar__overlay {
-  visibility: hidden;
-  opacity: 0;
-  transition: opacity, visibility;
-  transition-duration: 0.5s;
-}
-@media (max-width: 991.98px) {
-  .navbar__overlay {
-    position: fixed;
-    inset: 0;
-    z-index: 8;
-    background: rgba(0, 0, 0, 0.4);
-  }
-}
 
 .topact {
   margin-left: auto;
@@ -1916,6 +2009,11 @@ input {
   padding: 10px 20px;
   cursor: pointer;
 }
+@media (max-width: 767.98px) {
+  .topact__group {
+    display: none;
+  }
+}
 .topact__group:hover {
   outline: solid 2px var(--topact-bg-group);
 }
@@ -1923,11 +2021,6 @@ input {
   .topact__group:hover {
     -webkit-tap-highlight-color: transparent;
     outline: none;
-  }
-}
-@media (max-width: 767.98px) {
-  .topact__group {
-    display: none;
   }
 }
 .topact__group--simple {
@@ -1990,6 +2083,7 @@ html {
   --top-menu-border-color: #D2D1D6;
   --menu-column-scroll-color: #e5e6eb;
   --menu-column-scroll-opa: rgba(0, 0, 0, 0.2);
+  --slider-text-color: #fff;
 }
 @media (max-width: 767.98px) {
   html {
@@ -2021,6 +2115,7 @@ html.dark {
   --menu-column-text-color: #B9BABE;
   --menu-column-scroll-color: #B9BABE;
   --menu-column-scroll-opa: rgba(0, 0, 0, 0.4);
+  --slider-text-color: #fff;
 }
 @media (max-width: 767.98px) {
   html.dark {

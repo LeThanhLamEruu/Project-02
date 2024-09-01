@@ -24,6 +24,9 @@ html.dark {
     --menu-column-scroll-color: #B9BABE;
     --menu-column-scroll-opa: rgba(0, 0, 0, 0.4);
 
+    --slider-text-color: #fff;
+
+
     @include abstracts.breakpoint(md) {
         --header-bg-color: #171C28;
     }

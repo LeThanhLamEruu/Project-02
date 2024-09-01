@@ -14,7 +14,6 @@
         padding-top: 0;
     }
 
-
     &__inner {
         --inner-padding: 30px;
 
@@ -52,21 +51,6 @@
     }
 }
 
-::-webkit-scrollbar {
-    width: 6px;
-}
-
-::-webkit-scrollbar-track {
-    background-color: var(--menu-column-scroll-color);
-    border-radius: 3px;
-}
-
-::-webkit-scrollbar-thumb {
-    height: 10%;
-    box-shadow: inset 0 0 6px var(--menu-column-scroll-opa);
-    border-radius: 5px;
-}
-
 .top-menu {
     --max-height: calc(min(582px, (100vh - 158px)) - (var(--inner-padding) * 2));
     --main-col-width: 292px;
@@ -80,7 +64,6 @@
         @include abstracts.breakpoint(lg) {
             width: 100%;
             height: auto;
-            margin-top: -16px;
         }
     }
 }
@@ -133,10 +116,16 @@
 
     &__list {
         margin-top: 19px;
+
+        @include abstracts.breakpoint(lg) {
+            margin-top: 0;
+        }
     }
 
-    &__item--active .sub-menu {
-        display: grid;
+    &__item {
+        &--active .sub-menu {
+            display: grid;
+        }
     }
 
     &__item--active > &__link,
@@ -147,11 +136,13 @@
 
     &__heading {
         margin-top: 4px;
+
         font-size: 1.6rem;
         font-style: normal;
         font-weight: 500;
         line-height: 150%;
         color: var(--menu-column-text-color);
+
         @include abstracts.breakpoint(lg) {
             margin-bottom: 20px;
         }
@@ -160,6 +151,7 @@
     &__link {
         display: block;
         padding: 7px 0;
+
         font-size: 1.4rem;
         line-height: 142.857%;
         color: var(--menu-column-text-color);
@@ -170,6 +162,7 @@
     position: absolute;
     inset: 0 0 0 var(--main-col-width);
     padding-left: var(--inner-padding);
+
     overflow-y: auto;
 
     display: none;
@@ -178,9 +171,11 @@
     &--not-main {
         position: initial;
         inset: initial;
+
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         height: var(--max-height);
+
         padding-left: 0;
 
         @include abstracts.breakpoint(lg) {
@@ -192,6 +187,7 @@
     @include abstracts.breakpoint(lg) {
         position: initial;
         grid-template-columns: repeat(1, 1fr);
+
         padding-left: 0;
         height: auto;
     }
