@@ -28,6 +28,16 @@ html {
     --cate-item-thumb-bg: #fff;
     --cate-item-heading-color: #000;
 
+    --prod-fil-btn-color: #6C6C72;
+    --prod--fil-icon-color: brightness(0) saturate(100%) invert(8%) sepia(7%) saturate(5536%) hue-rotate(212deg) brightness(95%) contrast(96%);
+    --prod-fil-bg-btn: #fff;
+
+    --prod-cart-bg: #fff;
+    --prod-cart-shadow: rgba(237, 237, 246, 0.30);
+    --prod-like-btn-shadow: rgba(124, 124, 124, 0.30);
+    --prod-text-brand-color: #9E9DA8;
+    --prod-text-color: #1A162E;
+
     @include abstracts.screen(md) {
         --header-bg-color: #FFFFFF;
         --cate-item-bg: #fff;

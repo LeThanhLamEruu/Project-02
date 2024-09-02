@@ -159,6 +159,7 @@ a {
 
 button {
   background: transparent;
+  cursor: pointer;
 }
 
 a,
@@ -189,6 +190,13 @@ input {
   height: 10%;
   box-shadow: inset 0 0 6px var(--menu-column-scroll-opa);
   border-radius: 5px;
+}
+
+@media (max-width: 575.98px) {
+  .container {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
 }
 
 .row > *, .container-fluid, .container {
@@ -1787,6 +1795,7 @@ input {
   height: 100%;
   border-radius: 1.6rem;
   background: var(--cate-item-bg);
+  cursor: pointer;
 }
 @media (max-width: 1199.98px) {
   .cate-item {
@@ -1854,6 +1863,110 @@ input {
     font-size: 1.4rem;
     line-height: 142.857%;
   }
+}
+
+.fillter-btn {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  height: 36px;
+  padding: 0 14px;
+  color: var(--prod-fil-btn-color);
+  background: var(--prod-fil-bg-btn);
+  border-radius: 6px;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 142.857%;
+}
+.fillter-btn__icon {
+  filter: var(--prod--fil-icon-color);
+}
+
+.like-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  box-shadow: 0px 20px 60px var(--prod-like-btn-shadow);
+}
+.like-btn:not(.like-btn--liked) .like-btn__icon--liked {
+  display: none;
+}
+.like-btn--liked .like-btn__icon {
+  display: none;
+}
+.like-btn__icon--liked {
+  margin-top: 6px;
+}
+
+.product-cart {
+  padding: 16px;
+  border-radius: 20px;
+  background: var(--prod-cart-bg);
+  box-shadow: 0px 20px 60px 10px var(--prod-cart-shadow);
+}
+.product-cart__img-wrap {
+  position: relative;
+  padding-top: 100%;
+}
+.product-cart__thumb {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  flex-shrink: 0;
+  object-fit: contain;
+}
+.product-cart__like-btn {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+.product-cart__score, .product-cart__price, .product-cart__title {
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%;
+  color: var(--prod-text-color);
+}
+.product-cart__title {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+@media (max-width: 767.98px) {
+  .product-cart__title {
+    -webkit-line-clamp: 2;
+  }
+}
+.product-cart__row, .product-cart__brand, .product-cart__title {
+  margin-top: 16px;
+}
+.product-cart__brand {
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 146.667%;
+  color: var(--prod-text-brand-color);
+}
+.product-cart__row {
+  display: flex;
+  align-items: center;
+}
+.product-cart__star {
+  margin-left: auto;
+  width: 2.4rem;
+  height: 2.4rem;
+}
+.product-cart__score {
+  margin-left: 6px;
 }
 
 .topact__btn, .topact__group, .topact, .navbar__link, .navbar__list, .top-bar {
@@ -2162,6 +2275,14 @@ html {
   --cate-item-bg: #eee;
   --cate-item-thumb-bg: #fff;
   --cate-item-heading-color: #000;
+  --prod-fil-btn-color: #6C6C72;
+  --prod--fil-icon-color: brightness(0) saturate(100%) invert(8%) sepia(7%) saturate(5536%) hue-rotate(212deg) brightness(95%) contrast(96%);
+  --prod-fil-bg-btn: #fff;
+  --prod-cart-bg: #fff;
+  --prod-cart-shadow: rgba(237, 237, 246, 0.30);
+  --prod-like-btn-shadow: rgba(124, 124, 124, 0.30);
+  --prod-text-brand-color: #9E9DA8;
+  --prod-text-color: #1A162E;
 }
 @media (max-width: 767.98px) {
   html {
@@ -2198,6 +2319,14 @@ html.dark {
   --cate-item-bg: #171C28;
   --cate-item-thumb-bg: #292E39;
   --cate-item-text-color: #fff;
+  --prod-fil-btn-color: #fff;
+  --prod--fil-icon-color: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7500%) hue-rotate(114deg) brightness(109%) contrast(97%);
+  --prod-fil-bg-btn: #171C28;
+  --prod-cart-bg: #171C28;
+  --prod-cart-shadow: rgba(0, 0, 0, 0.30);
+  --prod-like-btn-shadow: rgba(124, 124, 124, 0.30);
+  --prod-text-brand-color: #9E9DA8;
+  --prod-text-color: #fff;
 }
 @media (max-width: 767.98px) {
   html.dark {
@@ -2219,7 +2348,6 @@ html.dark {
   }
 }
 .home__heading {
-  margin-bottom: 20px;
   font-size: 2.4rem;
   font-style: normal;
   font-weight: 700;
@@ -2238,6 +2366,12 @@ html.dark {
   .home__cate {
     --grid-gutter-y: 20px;
   }
+}
+.home__row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
 }
 
 /*# sourceMappingURL=main.css.map */

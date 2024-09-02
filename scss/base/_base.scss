@@ -1,3 +1,5 @@
+@use "../abstracts";
+
 *,
 ::before,
 ::after {
@@ -24,6 +26,7 @@ a {
 
 button {
     background: transparent;
+    cursor: pointer;
 }
 
 a,
@@ -54,4 +57,11 @@ input {
     height: 10%;
     box-shadow: inset 0 0 6px var(--menu-column-scroll-opa);
     border-radius: 5px;
+}
+
+.container {
+    @include abstracts.screen(sm) {
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+    }
 }

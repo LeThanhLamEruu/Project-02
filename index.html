@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en" class="">
 
     <head>
         <meta charset="UTF-8">
@@ -34,7 +34,7 @@
         <!-- Main -->
         <div class="container home">
             <!-- Slideshow -->
-            <section class="home__container">
+            <div class="home__container">
                 <div class="slideshow">
                     <!-- Slideshow img -->
                     <div class="slideshow__inner">
@@ -72,51 +72,357 @@
                         <div class="slideshow__num">5</div>
                     </div>
                 </div>
-            </section>
+            </div>
 
             <!-- Browser Categories -->
             <section class="home__container">
-                <h2 class="home__heading">Browse Categories</h2>
+                <div class="home__row">
+                    <h2 class="home__heading">Browse Categories</h2>
+                </div>
                 <div class="home__cate row row-cols-3 row-cols-md-1">
                     <div class="col">
-                        <article class="cate-item">
-                            <img src="./assets/imgs/categories/cate-1.png" alt="" class="cate-item__thumb">
-                            <section class="cate-item__info">
-                                <h3 class="cate-item__title">$25 - $150</h3>
-                                <p class="cate-item__desc">New sumatra mandeling coffe blend</p>
-                            </section>
-                        </article>
+                        <a href="#!">
+                            <article class="cate-item">
+                                <img src="./assets/imgs/categories/cate-1.png" alt="" class="cate-item__thumb">
+                                <div class="cate-item__info">
+                                    <h3 class="cate-item__title">$25 - $150</h3>
+                                    <p class="cate-item__desc">New sumatra mandeling coffe blend</p>
+                                </div>
+                            </article>
+                        </a>
                     </div>
 
                     <div class="col">
-                        <article class="cate-item">
-                            <img src="./assets/imgs/categories/cate-2.png" alt="" class="cate-item__thumb">
-                            <section class="cate-item__info">
-                                <h3 class="cate-item__title">$38 - $160</h3>
-                                <p class="cate-item__desc">Espresso arabica and robusta beans</p>
-                            </section>
-                        </article>
+                        <a href="#!">
+                            <article class="cate-item">
+                                <img src="./assets/imgs/categories/cate-2.png" alt="" class="cate-item__thumb">
+                                <div class="cate-item__info">
+                                    <h3 class="cate-item__title">$38 - $160</h3>
+                                    <p class="cate-item__desc">Espresso arabica and robusta beans</p>
+                                </div>
+                            </article>
+                        </a>
                     </div>
 
                     <div class="col">
-                        <article class="cate-item">
-                            <img src="./assets/imgs/categories/cate-3.png" alt="" class="cate-item__thumb">
-                            <section class="cate-item__info">
-                                <h3 class="cate-item__title">$32 - $160</h3>
-                                <p class="cate-item__desc">Lavazza top class whole bean coffee blend</p>
-                            </section>
-                        </article>
+                        <a href="#!">
+                            <article class="cate-item">
+                                <img src="./assets/imgs/categories/cate-3.png" alt="" class="cate-item__thumb">
+                                <div class="cate-item__info">
+                                    <h3 class="cate-item__title">$32 - $160</h3>
+                                    <p class="cate-item__desc">Lavazza top class whole bean coffee blend</p>
+                                </div>
+                            </article>
+                        </a>
                     </div>
                 </div>
             </section>
 
             <!-- Browser Products -->
             <section class="home__container">
-                <h2 class="home__heading">Total Lavazza product</h2>
+                <div class="home__row">
+                    <h2 class="home__heading">Total Lavazza product</h2>
+                    <button class="fillter-btn">
+                        Fillter
+                        <img src="./assets/icons/fillter.svg" alt="" class="fillter-btn__icon">
+                    </button>
 
+                    <!-- <div class="fillter">
+                        <h3 class="fillter__heading"></h3>
+                    </div> -->
+                </div>
+                <!-- Row 1 -->
+                <div class="row row-cols-5 row-cols-lg-2 row-cols-sm-1 g-3">
+                    <!-- Column 1 -->
+                    <div class="col">
+                        <article class="product-cart">
+                            <div class="product-cart__img-wrap">
+                                <a href="#!">
+                                    <img src="./assets/imgs/products/prod-1.png" alt="" class="product-cart__thumb">
+                                </a>
+                                <button class="like-btn product-cart__like-btn">
+                                    <img src="./assets/icons/heart.svg" alt="" class="like-btn__icon icon">
+                                    <img src="./assets/icons/heartred.svg" alt="" class="like-btn__icon--liked">
+
+                                </button>
+                            </div>
+
+                            <h3 class="product-cart__title">
+                                <a href="#!">
+                                    Coffee Beans - Espresso Arabica and Robusta Beans
+                                </a>
+                            </h3>
+
+                            <p class="product-cart__brand">Lavazza</p>
+
+                            <div class="product-cart__row">
+                                <span class="product-cart__price">$48.00</span>
+                                <img src="./assets/icons/star.svg" alt="" class="product-cart__star">
+                                <span class="product-cart__score">4.3</span>
+                            </div>
+                        </article>
+                    </div>
+                    <!-- Column 2 -->
+                    <div class="col">
+                        <article class="product-cart">
+                            <div class="product-cart__img-wrap">
+                                <a href="#!">
+                                    <img src="./assets/imgs/products/prod-2.png" alt="" class="product-cart__thumb">
+                                </a>
+                                <button class="like-btn product-cart__like-btn">
+                                    <img src="./assets/icons/heart.svg" alt="" class="like-btn__icon icon">
+                                    <img src="./assets/icons/heartred.svg" alt="" class="like-btn__icon--liked">
+
+                                </button>
+                            </div>
+
+                            <h3 class="product-cart__title">
+                                <a href="#!">
+                                    Lavazza Coffee Blends - Try the Italian Espresso
+                                </a>
+                            </h3>
+
+                            <p class="product-cart__brand">Lavazza</p>
+
+                            <div class="product-cart__row">
+                                <span class="product-cart__price">$53.00</span>
+                                <img src="./assets/icons/star.svg" alt="" class="product-cart__star">
+                                <span class="product-cart__score">3.3</span>
+                            </div>
+                        </article>
+                    </div>
+                    <!-- Column 3 -->
+                    <div class="col">
+                        <article class="product-cart">
+                            <div class="product-cart__img-wrap">
+                                <a href="#!">
+                                    <img src="./assets/imgs/products/prod-3.png" alt="" class="product-cart__thumb">
+                                </a>
+                                <button class="like-btn like-btn--liked product-cart__like-btn">
+                                    <img src="./assets/icons/heart.svg" alt="" class="like-btn__icon icon">
+                                    <img src="./assets/icons/heartred.svg" alt="" class="like-btn__icon--liked">
+                                </button>
+                            </div>
+
+                            <h3 class="product-cart__title">
+                                <a href="#!">
+                                    Lavazza - Caffè Espresso Black Tin - Ground coffee
+                                </a>
+                            </h3>
+
+                            <p class="product-cart__brand">Lavazza</p>
+
+                            <div class="product-cart__row">
+                                <span class="product-cart__price">$99.99</span>
+                                <img src="./assets/icons/star.svg" alt="" class="product-cart__star">
+                                <span class="product-cart__score">5.0</span>
+                            </div>
+                        </article>
+                    </div>
+                    <!-- Column 4 -->
+                    <div class="col">
+                        <article class="product-cart">
+                            <div class="product-cart__img-wrap">
+                                <a href="#!">
+                                    <img src="./assets/imgs/products/prod-4.png" alt="" class="product-cart__thumb">
+                                </a>
+                                <button class="like-btn product-cart__like-btn">
+                                    <img src="./assets/icons/heart.svg" alt="" class="like-btn__icon icon">
+                                    <img src="./assets/icons/heartred.svg" alt="" class="like-btn__icon--liked">
+
+                                </button>
+                            </div>
+
+                            <h3 class="product-cart__title">
+                                <a href="#!">
+                                    Qualità Oro Mountain Grown - Espresso Coffee Beans
+                                </a>
+                            </h3>
+
+                            <p class="product-cart__brand">Lavazza</p>
+
+                            <div class="product-cart__row">
+                                <span class="product-cart__price">$38.65</span>
+                                <img src="./assets/icons/star.svg" alt="" class="product-cart__star">
+                                <span class="product-cart__score">4.6</span>
+                            </div>
+                        </article>
+                    </div>
+                    <!-- Column 5 -->
+                    <div class="col">
+                        <article class="product-cart">
+                            <div class="product-cart__img-wrap">
+                                <a href="#!">
+                                    <img src="./assets/imgs/products/prod-1.png" alt="" class="product-cart__thumb">
+                                </a>
+                                <button class="like-btn product-cart__like-btn">
+                                    <img src="./assets/icons/heart.svg" alt="" class="like-btn__icon icon">
+                                    <img src="./assets/icons/heartred.svg" alt="" class="like-btn__icon--liked">
+
+                                </button>
+                            </div>
+
+                            <h3 class="product-cart__title">
+                                <a href="#!">
+                                    Coffee Beans - Espresso Arabica and Robusta Beans
+                                </a>
+                            </h3>
+
+                            <p class="product-cart__brand">Lavazza</p>
+
+                            <div class="product-cart__row">
+                                <span class="product-cart__price">$48.00</span>
+                                <img src="./assets/icons/star.svg" alt="" class="product-cart__star">
+                                <span class="product-cart__score">4.3</span>
+                            </div>
+                        </article>
+                    </div>
+                    <!-- Column 6 -->
+                    <div class="col">
+                        <article class="product-cart">
+                            <div class="product-cart__img-wrap">
+                                <a href="#!">
+                                    <img src="./assets/imgs/products/prod-3.png" alt="" class="product-cart__thumb">
+                                </a>
+                                <button class="like-btn like-btn--liked product-cart__like-btn">
+                                    <img src="./assets/icons/heart.svg" alt="" class="like-btn__icon icon">
+                                    <img src="./assets/icons/heartred.svg" alt="" class="like-btn__icon--liked">
+                                </button>
+                            </div>
+
+                            <h3 class="product-cart__title">
+                                <a href="#!">
+                                    Lavazza - Caffè Espresso Black Tin - Ground coffee
+                                </a>
+                            </h3>
+
+                            <p class="product-cart__brand">Lavazza</p>
+
+                            <div class="product-cart__row">
+                                <span class="product-cart__price">$99.99</span>
+                                <img src="./assets/icons/star.svg" alt="" class="product-cart__star">
+                                <span class="product-cart__score">5.0</span>
+                            </div>
+                        </article>
+                    </div>
+                    <!-- Column 7 -->
+                    <div class="col">
+                        <article class="product-cart">
+                            <div class="product-cart__img-wrap">
+                                <a href="#!">
+                                    <img src="./assets/imgs/products/prod-4.png" alt="" class="product-cart__thumb">
+                                </a>
+                                <button class="like-btn product-cart__like-btn">
+                                    <img src="./assets/icons/heart.svg" alt="" class="like-btn__icon icon">
+                                    <img src="./assets/icons/heartred.svg" alt="" class="like-btn__icon--liked">
+
+                                </button>
+                            </div>
+
+                            <h3 class="product-cart__title">
+                                <a href="#!">
+                                    Qualità Oro Mountain Grown - Espresso Coffee Beans
+                                </a>
+                            </h3>
+
+                            <p class="product-cart__brand">Lavazza</p>
+
+                            <div class="product-cart__row">
+                                <span class="product-cart__price">$38.65</span>
+                                <img src="./assets/icons/star.svg" alt="" class="product-cart__star">
+                                <span class="product-cart__score">4.6</span>
+                            </div>
+                        </article>
+                    </div>
+                    <!-- Column 8 -->
+                    <div class="col">
+                        <article class="product-cart">
+                            <div class="product-cart__img-wrap">
+                                <a href="#!">
+                                    <img src="./assets/imgs/products/prod-1.png" alt="" class="product-cart__thumb">
+                                </a>
+                                <button class="like-btn product-cart__like-btn">
+                                    <img src="./assets/icons/heart.svg" alt="" class="like-btn__icon icon">
+                                    <img src="./assets/icons/heartred.svg" alt="" class="like-btn__icon--liked">
+
+                                </button>
+                            </div>
+
+                            <h3 class="product-cart__title">
+                                <a href="#!">
+                                    Coffee Beans - Espresso Arabica and Robusta Beans
+                                </a>
+                            </h3>
+
+                            <p class="product-cart__brand">Lavazza</p>
+
+                            <div class="product-cart__row">
+                                <span class="product-cart__price">$48.00</span>
+                                <img src="./assets/icons/star.svg" alt="" class="product-cart__star">
+                                <span class="product-cart__score">4.3</span>
+                            </div>
+                        </article>
+                    </div>
+                    <!-- Column 9 -->
+                    <div class="col">
+                        <article class="product-cart">
+                            <div class="product-cart__img-wrap">
+                                <a href="#!">
+                                    <img src="./assets/imgs/products/prod-2.png" alt="" class="product-cart__thumb">
+                                </a>
+                                <button class="like-btn product-cart__like-btn">
+                                    <img src="./assets/icons/heart.svg" alt="" class="like-btn__icon icon">
+                                    <img src="./assets/icons/heartred.svg" alt="" class="like-btn__icon--liked">
+
+                                </button>
+                            </div>
+
+                            <h3 class="product-cart__title">
+                                <a href="#!">
+                                    Lavazza Coffee Blends - Try the Italian Espresso
+                                </a>
+                            </h3>
+
+                            <p class="product-cart__brand">Lavazza</p>
+
+                            <div class="product-cart__row">
+                                <span class="product-cart__price">$53.00</span>
+                                <img src="./assets/icons/star.svg" alt="" class="product-cart__star">
+                                <span class="product-cart__score">3.3</span>
+                            </div>
+                        </article>
+                    </div>
+                    <!-- Column 10 -->
+                    <div class="col">
+                        <article class="product-cart">
+                            <div class="product-cart__img-wrap">
+                                <a href="#!">
+                                    <img src="./assets/imgs/products/prod-1.png" alt="" class="product-cart__thumb">
+                                </a>
+                                <button class="like-btn product-cart__like-btn">
+                                    <img src="./assets/icons/heart.svg" alt="" class="like-btn__icon icon">
+                                    <img src="./assets/icons/heartred.svg" alt="" class="like-btn__icon--liked">
+
+                                </button>
+                            </div>
+
+                            <h3 class="product-cart__title">
+                                <a href="#!">
+                                    Coffee Beans - Espresso Arabica and Robusta Beans
+                                </a>
+                            </h3>
+
+                            <p class="product-cart__brand">Lavazza</p>
+
+                            <div class="product-cart__row">
+                                <span class="product-cart__price">$48.00</span>
+                                <img src="./assets/icons/star.svg" alt="" class="product-cart__star">
+                                <span class="product-cart__score">4.3</span>
+                            </div>
+                        </article>
+                    </div>
+                </div>
             </section>
-
-
         </div>
 
         <!-- Footer -->

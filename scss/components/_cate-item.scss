@@ -10,6 +10,8 @@
     border-radius: 1.6rem;
     background: var(--cate-item-bg);
 
+    cursor: pointer;
+
     @include abstracts.screen(xl) {
         flex-direction: column;
     }
