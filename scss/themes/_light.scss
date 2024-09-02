@@ -24,8 +24,13 @@ html {
 
     --slider-text-color: #fff;
 
+    --cate-item-bg: #eee;
+    --cate-item-thumb-bg: #fff;
+    --cate-item-heading-color: #000;
+
     @include abstracts.screen(md) {
         --header-bg-color: #FFFFFF;
+        --cate-item-bg: #fff;
     }
 
     @include abstracts.screen(lg) {

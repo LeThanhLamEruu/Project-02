@@ -26,6 +26,10 @@ html.dark {
 
     --slider-text-color: #fff;
 
+    --cate-item-bg: #171C28;
+    --cate-item-thumb-bg: #292E39;
+    --cate-item-text-color: #fff;
+
 
     @include abstracts.screen(md) {
         --header-bg-color: #171C28;
