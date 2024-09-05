@@ -2289,7 +2289,7 @@ input {
   .fillter__content {
     height: calc(100vh - 230px);
     background: var(--fillter-form-bg-color);
-    margin-bottom: 200px;
+    padding-bottom: 60px;
   }
 }
 
