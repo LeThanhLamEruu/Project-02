@@ -2288,8 +2288,9 @@ input {
 }
 @media (max-width: 575.98px) {
   .fillter__content {
+    overflow-x: none;
     height: calc(100vh - 230px);
-    margin-bottom: 140px;
+    margin-bottom: 180px;
   }
 }
 
