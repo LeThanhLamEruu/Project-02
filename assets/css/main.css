@@ -2105,7 +2105,7 @@ input {
 }
 @media (max-width: 575.98px) {
   .fillter__form-input {
-    font-size: 1.6rem;
+    font-size: 1.6rem !important;
   }
 }
 .fillter__form-input--big {
@@ -2121,7 +2121,7 @@ input {
 }
 @media (max-width: 575.98px) {
   .fillter__form-input--big {
-    font-size: 1.6rem;
+    font-size: 1.6rem !important;
   }
 }
 .fillter__form-input-icon {
