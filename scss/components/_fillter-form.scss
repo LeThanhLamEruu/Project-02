@@ -274,6 +274,7 @@
         @include abstracts.screen (sm) {
             position: sticky;
             bottom: 30px;
+            padding: 20px 0;
             background: var(--fillter-form-bg-color);
         }
     }
