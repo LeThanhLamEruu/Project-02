@@ -2282,13 +2282,13 @@ input {
     overflow-y: auto;
     overscroll-behavior: contain;
     flex-direction: column;
-    gap: 10px;
+    gap: 30px;
   }
 }
 @media (max-width: 575.98px) {
   .fillter__content {
     height: calc(100vh - 230px);
-    margin-bottom: 120px;
+    margin-bottom: 140px;
   }
 }
 

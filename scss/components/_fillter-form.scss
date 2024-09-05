@@ -312,12 +312,12 @@
             overscroll-behavior: contain;
 
             flex-direction: column;
-            gap: 10px;
+            gap: 30px;
         }
 
         @include abstracts.screen (sm) {
             height: calc(100vh - 230px);
-            margin-bottom: 120px;
+            margin-bottom: 140px;
         }
     }
 }
