@@ -2237,7 +2237,6 @@ input {
 }
 .fillter__col {
   width: 100%;
-  margin-bottom: 30px;
 }
 .fillter__row {
   display: flex;
@@ -2277,6 +2276,9 @@ input {
 }
 .fillter__heading, .fillter__content, .fillter__footer {
   padding: 0 30px;
+}
+.fillter__content {
+  gap: 30px;
 }
 @media (max-width: 1199.98px) {
   .fillter__content {

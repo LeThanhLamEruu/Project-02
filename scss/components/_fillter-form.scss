@@ -258,7 +258,6 @@
 
     &__col {
         width: 100%;
-        margin-bottom: 30px;
     }
 
     &__row {
@@ -308,11 +307,12 @@
     }
 
     &__content {
+        gap: 30px;
+
         @include abstracts.screen (xl) {
             height: calc(100vh - 250px);
             overflow-y: auto;
             overscroll-behavior: contain;
-
             flex-direction: column;
         }
 
