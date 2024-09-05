@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="">
+<html lang="en" class="dark">
 
     <head>
         <meta charset="UTF-8">
@@ -122,14 +122,124 @@
             <section class="home__container">
                 <div class="home__row">
                     <h2 class="home__heading">Total Lavazza product</h2>
-                    <button class="fillter-btn">
-                        Fillter
-                        <img src="./assets/icons/fillter.svg" alt="" class="fillter-btn__icon">
-                    </button>
+                    <div class="fillter-wrap">
+                        <!-- Fillter button -->
+                        <button class="fillter-btn js-toggle" toggle-target="#home-fillter">
+                            Fillter
+                            <img src="./assets/icons/fillter.svg" alt="" class="fillter-btn__icon">
+                        </button>
 
-                    <!-- <div class="fillter">
-                        <h3 class="fillter__heading"></h3>
-                    </div> -->
+                        <!-- Fillter form -->
+                        <div id="home-fillter" class="fillter hide">
+
+                            <img src="./assets/icons/arrow-up.png" alt="" class="fillter__arrow">
+
+                            <h3 class="fillter__heading">Fillter</h3>
+
+                            <form action="" class="fillter__form">
+                                <!-- Fillter row 1 -->
+                                <div class="fillter__row fillter__content">
+                                    <!-- Fillter column 1 -->
+                                    <div class="fillter__col">
+                                        <label for="" class="fillter__form-label">Price</label>
+                                        <!-- Slider -->
+                                        <div class="fillter__form-group">
+                                            <div class="fillter__form-slider"
+                                                 style="--min-value: 10%; --max-value: 60%">
+                                            </div>
+                                        </div>
+                                        <!-- Input down -->
+                                        <div class="fillter__form-group fillter__form-group--inline">
+                                            <!-- Minimum -->
+                                            <div>
+                                                <label for=""
+                                                       class="fillter__form-label fillter__form-label--small">
+                                                    Minimum
+                                                </label>
+                                                <input type="text" name="" id="" value="$30.00"
+                                                       class="fillter__form-input">
+                                            </div>
+                                            <!-- Maximum -->
+                                            <div>
+                                                <label for=""
+                                                       class="fillter__form-label fillter__form-label--small">
+                                                    Maximum
+                                                </label>
+                                                <input type="text" name="" id="" value="$100.00"
+                                                       class="fillter__form-input">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="fillter__divider"></div>
+
+                                    <!-- Fillter column 2 -->
+                                    <div class="fillter__col">
+                                        <label for="" class="fillter__form-label">Size | Weight</label>
+                                        <!-- Input -->
+                                        <div class="fillter__form-group">
+                                            <div class="fillter__form-select-wrap">
+                                                <div class="fillter__form-select" style="--width: 158px">
+                                                    500g
+                                                    <img src="./assets/icons/arrowdf.svg" alt=""
+                                                         class="fillter__form-select-icon icon">
+                                                </div>
+
+                                                <div class="fillter__form-select">
+                                                    Gram
+                                                    <img src="./assets/icons/arrowdf.svg" alt=""
+                                                         class="fillter__form-select-icon icon">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Tags -->
+                                        <div class="fillter__form-group">
+                                            <div class="fillter__form-tags">
+                                                <button class="fillter__form-tag">Small</button>
+                                                <button class="fillter__form-tag">Medium</button>
+                                                <button class="fillter__form-tag">Large</button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="fillter__divider"></div>
+
+                                    <!-- Fillter column 3 -->
+                                    <div class="fillter__col">
+                                        <label for="" class="fillter__form-label">Brand</label>
+                                        <!-- Input -->
+                                        <div class="fillter__form-group">
+                                            <div class="fillter__form-text-input">
+                                                <input type="text" name="" id="" value=""
+                                                       placeholder="Search brand name"
+                                                       class="fillter__form-input fillter__form-input--big">
+
+                                                <img src="./assets/icons/search.svg" alt=""
+                                                     class="fillter__form-input-icon icon">
+                                            </div>
+                                        </div>
+
+                                        <!-- Tags -->
+                                        <div class="fillter__form-group">
+                                            <div class="fillter__form-tags">
+                                                <button class="fillter__form-tag">Lavazza</button>
+                                                <button class="fillter__form-tag">Nescafe</button>
+                                                <button class="fillter__form-tag">Starbucks</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Fillter row 2 -->
+                                <div class="fillter__row fillter__footer">
+                                    <button class="btn btn--text fillter__cancel js-toggle"
+                                            toggle-target="#home-fillter">Cancel</button>
+                                    <button class="btn btn--primary fillter__result js-toggle"
+                                            toggle-target="#home-fillter">Show Result</button>
+                                </div>
+                            </form>
+                        </div>
+
+                    </div>
                 </div>
                 <!-- Row 1 -->
                 <div class="row row-cols-5 row-cols-lg-2 row-cols-sm-1 g-3">

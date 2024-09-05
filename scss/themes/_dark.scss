@@ -40,6 +40,13 @@ html.dark {
     --prod-text-brand-color: #9E9DA8;
     --prod-text-color: #fff;
 
+    --fillter-form-bg-color: #292E39;
+    --fillter-form-bg-fil: brightness(0) saturate(100%) invert(12%) sepia(3%) saturate(5850%) hue-rotate(184deg) brightness(100%) contrast(85%);
+    --fillter-form-shadow: rgba(0, 0, 0, 0.40);
+    --fillter-form-border: #D2D1D6;
+    --fillter-color: #9E9DA8;
+    --fillter-bg-button: #171C28;
+
 
     @include abstracts.screen(md) {
         --header-bg-color: #171C28;

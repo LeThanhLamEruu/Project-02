@@ -38,6 +38,14 @@ html {
     --prod-text-brand-color: #9E9DA8;
     --prod-text-color: #1A162E;
 
+    --fillter-form-bg-color: #fff;
+    --fillter-form-bg-fil: brightness(0) saturate(100%) invert(97%) sepia(100%) saturate(13%) hue-rotate(253deg) brightness(102%) contrast(100%);
+    --fillter-form-shadow: rgba(200, 200, 200, 0.40);
+    --fillter-form-border: #D2D1D6;
+    --fillter-color: #9E9DA8;
+    --fillter-bg-button: #F8F8FB;
+
+
     @include abstracts.screen(md) {
         --header-bg-color: #FFFFFF;
         --cate-item-bg: #fff;
