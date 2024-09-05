@@ -2037,7 +2037,6 @@ input {
     position: fixed;
     inset: 0;
     border-radius: 0;
-    z-index: 999;
   }
 }
 .fillter__arrow {
@@ -2063,9 +2062,7 @@ input {
 }
 @media (max-width: 1199.98px) {
   .fillter__divider {
-    width: 100%;
-    height: 1px;
-    margin: 10px 0;
+    display: none;
   }
 }
 .fillter__form {
@@ -2098,7 +2095,7 @@ input {
   border-radius: 0.6rem;
   border: 1px solid var(--fillter-form-border);
   padding: 8px 12px;
-  width: 121px;
+  width: 122px;
   background: var(--fillter-form-bg-color);
 }
 @media (max-width: 1199.98px) {
@@ -2121,6 +2118,11 @@ input {
 .fillter__form-input--big::placeholder {
   color: var(--fillter-color);
   font-weight: 400;
+}
+@media (max-width: 575.98px) {
+  .fillter__form-input--big {
+    font-size: 1.6rem;
+  }
 }
 .fillter__form-input-icon {
   cursor: pointer;
@@ -2274,15 +2276,13 @@ input {
 .fillter__heading, .fillter__content, .fillter__footer {
   padding: 0 30px;
 }
-.fillter__content {
-  height: calc(100vh - 250px);
-  overflow-y: auto;
-  overscroll-behavior: contain;
-}
 @media (max-width: 1199.98px) {
   .fillter__content {
+    height: calc(100vh - 250px);
+    overflow-y: auto;
+    overscroll-behavior: contain;
     flex-direction: column;
-    gap: 30px;
+    gap: 10px;
   }
 }
 @media (max-width: 575.98px) {

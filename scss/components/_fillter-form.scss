@@ -33,7 +33,6 @@
         position: fixed;
         inset: 0;
         border-radius: 0;
-        z-index: 999;
     }
 
     &__arrow {
@@ -60,9 +59,7 @@
         margin: 0 30px;
 
         @include abstracts.screen (xl) {
-            width: 100%;
-            height: 1px;
-            margin: 10px 0;
+            display: none;
         }
     }
 
@@ -102,7 +99,7 @@
             border-radius: 0.6rem;
             border: 1px solid var(--fillter-form-border);
             padding: 8px 12px;
-            width: 121px;
+            width: 122px;
             background: var(--fillter-form-bg-color);
 
             @include abstracts.screen (xl) {
@@ -123,6 +120,10 @@
                 &::placeholder {
                     color: var(--fillter-color);
                     font-weight: 400;
+                }
+
+                @include abstracts.screen (sm) {
+                    font-size: 1.6rem;
                 }
             }
 
@@ -305,13 +306,13 @@
     }
 
     &__content {
-        height: calc(100vh - 250px);
-        overflow-y: auto;
-        overscroll-behavior: contain;
-
         @include abstracts.screen (xl) {
+            height: calc(100vh - 250px);
+            overflow-y: auto;
+            overscroll-behavior: contain;
+
             flex-direction: column;
-            gap: 30px;
+            gap: 10px;
         }
 
         @include abstracts.screen (sm) {
