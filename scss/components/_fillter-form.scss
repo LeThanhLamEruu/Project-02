@@ -271,9 +271,8 @@
 
         @include abstracts.screen (sm) {
             position: sticky;
-            margin-bottom: 30px;
+            bottom: 30px;
             background: var(--fillter-form-bg-color);
-            z-index: 3;
         }
     }
 
@@ -284,7 +283,6 @@
 
         @include abstracts.screen (sm) {
             flex: 1;
-            height: 42px;
         }
     }
 

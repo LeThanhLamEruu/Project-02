@@ -2248,9 +2248,8 @@ input {
 @media (max-width: 575.98px) {
   .fillter__footer {
     position: sticky;
-    margin-bottom: 30px;
+    bottom: 30px;
     background: var(--fillter-form-bg-color);
-    z-index: 3;
   }
 }
 .fillter__cancel, .fillter__result {
@@ -2260,7 +2259,6 @@ input {
 @media (max-width: 575.98px) {
   .fillter__cancel, .fillter__result {
     flex: 1;
-    height: 42px;
   }
 }
 .fillter__cancel {
