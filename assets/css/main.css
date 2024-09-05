@@ -2062,7 +2062,8 @@ input {
 }
 @media (max-width: 1199.98px) {
   .fillter__divider {
-    display: none;
+    width: 100%;
+    height: 1px;
   }
 }
 .fillter__form {
