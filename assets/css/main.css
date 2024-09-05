@@ -2105,6 +2105,11 @@ input {
     width: 100%;
   }
 }
+@media (max-width: 575.98px) {
+  .fillter__form-input {
+    font-size: 1.6rem;
+  }
+}
 .fillter__form-input--big {
   font-size: 1.5rem;
   line-height: 146.667%;
@@ -2239,6 +2244,13 @@ input {
   justify-content: flex-end;
   margin-top: 32px;
 }
+@media (max-width: 575.98px) {
+  .fillter__footer {
+    position: sticky;
+    margin-bottom: 30px;
+    background: var(--fillter-form-bg-color);
+  }
+}
 .fillter__cancel, .fillter__result {
   height: 38px;
   padding: 10px;
@@ -2246,6 +2258,7 @@ input {
 @media (max-width: 575.98px) {
   .fillter__cancel, .fillter__result {
     flex: 1;
+    height: 42px;
   }
 }
 .fillter__cancel {
@@ -2274,7 +2287,8 @@ input {
 }
 @media (max-width: 575.98px) {
   .fillter__content {
-    height: calc(100vh - 200px);
+    height: calc(100vh - 230px);
+    margin-bottom: 60px;
   }
 }
 

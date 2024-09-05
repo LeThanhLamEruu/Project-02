@@ -108,6 +108,10 @@
                 width: 100%;
             }
 
+            @include abstracts.screen (sm) {
+                font-size: 1.6rem;
+            }
+
             &--big {
                 font-size: 1.5rem;
                 line-height: 146.667%;
@@ -263,6 +267,12 @@
         display: flex;
         justify-content: flex-end;
         margin-top: 32px;
+
+        @include abstracts.screen (sm) {
+            position: sticky;
+            margin-bottom: 30px;
+            background: var(--fillter-form-bg-color);
+        }
     }
 
     &__cancel,
@@ -272,6 +282,7 @@
 
         @include abstracts.screen (sm) {
             flex: 1;
+            height: 42px;
         }
     }
 
@@ -304,7 +315,8 @@
         }
 
         @include abstracts.screen (sm) {
-            height: calc(100vh - 200px);
+            height: calc(100vh - 230px);
+            margin-bottom: 60px;
         }
     }
 }
