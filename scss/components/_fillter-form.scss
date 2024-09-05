@@ -317,7 +317,8 @@
 
         @include abstracts.screen (sm) {
             height: calc(100vh - 230px);
-            margin-bottom: 60px;
+            background: var(--fillter-form-bg-color);
+            margin-bottom: 180px;
         }
     }
 }
