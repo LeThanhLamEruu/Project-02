@@ -2249,6 +2249,7 @@ input {
     position: sticky;
     margin-bottom: 30px;
     background: var(--fillter-form-bg-color);
+    z-index: 3;
   }
 }
 .fillter__cancel, .fillter__result {
