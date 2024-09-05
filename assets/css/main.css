@@ -2237,6 +2237,7 @@ input {
 }
 .fillter__col {
   width: 100%;
+  margin-bottom: 30px;
 }
 .fillter__row {
   display: flex;
@@ -2282,13 +2283,12 @@ input {
     overflow-y: auto;
     overscroll-behavior: contain;
     flex-direction: column;
-    gap: 30px;
   }
 }
 @media (max-width: 575.98px) {
   .fillter__content {
     height: calc(100vh - 230px);
-    margin-bottom: 180px;
+    margin-bottom: 60px;
   }
 }
 
