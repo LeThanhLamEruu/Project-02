@@ -5,6 +5,9 @@ html.dark {
     --icon-color: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7492%) hue-rotate(49deg) brightness(98%) contrast(104%);
 
     --header-bg-color: #171C28;
+    --footer-bg-color: var(--header-bg-color);
+    --footer-text-color: #9e9da6;
+
     --header-shadow: rgba(0, 0, 0, 0.20);
     --topact-bg-group: #292E39;
     --topact-bg-avatar: #DFD2FA;

@@ -5,6 +5,9 @@ html {
     --icon-color: brightness(0) saturate(100%) invert(8%) sepia(30%) saturate(1157%) hue-rotate(210deg) brightness(97%) contrast(97%);
 
     --header-bg-color: #EEEEEE;
+    --footer-bg-color: var(--header-bg-color);
+    --footer-text-color: #6e6d74;
+
     --header-shadow: rgba(237, 237, 246, 0.20);
     --topact-bg-group: #FFF;
 
@@ -44,7 +47,6 @@ html {
     --fillter-form-border: #D2D1D6;
     --fillter-color: #9E9DA8;
     --fillter-bg-button: #F8F8FB;
-
 
     @include abstracts.screen(md) {
         --header-bg-color: #FFFFFF;
