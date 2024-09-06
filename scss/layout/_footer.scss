@@ -51,7 +51,7 @@
     &__link,
     &__text {
         padding: 8px 0;
-        font-size: 1.5rem;
+        font-size: 1.4rem;
         line-height: 1.5;
         color: var(--text-color);
 
@@ -133,6 +133,7 @@
 
         @include abstracts.screen(sm) {
             width: 100%;
+            font-size: 1.6rem;
         }
     }
 
@@ -202,6 +203,11 @@
             filter: grayscale(0);
             translate: 0 -3px;
         }
+
+        @include abstracts.screen(md) {
+            width: 42px;
+            height: 42px;
+        }
     }
 
     &__copyright {
@@ -216,5 +222,9 @@
     &__social-icon {
         width: 14px;
         filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7492%) hue-rotate(49deg) brightness(98%) contrast(104%);
+
+        @include abstracts.screen(md) {
+            width: 18px;
+        }
     }
 }
