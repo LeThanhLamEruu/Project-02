@@ -2,7 +2,6 @@
 
 .fillter-wrap {
     position: relative;
-    z-index: 2;
 }
 
 .fillter {
@@ -10,6 +9,7 @@
     right: 0;
     top: 55px;
     padding: 30px 0;
+    z-index: 20;
 
     border-radius: 20px;
 
@@ -282,6 +282,7 @@
     &__result {
         height: 38px;
         padding: 10px;
+        pointer-events: auto;
 
         @include abstracts.screen (sm) {
             flex: 1;
