@@ -268,12 +268,12 @@
     &__footer {
         display: flex;
         justify-content: flex-end;
-        margin-top: 32px;
+        margin-top: 14px;
 
         @include abstracts.screen (sm) {
             position: sticky;
-            bottom: 30px;
-            padding: 20px 0;
+            bottom: 0;
+            padding: 24px 0 !important;
             background: var(--fillter-form-bg-color);
         }
     }
