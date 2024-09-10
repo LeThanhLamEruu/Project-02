@@ -3027,11 +3027,6 @@ html.dark {
   gap: 50px;
   padding: 0 30px;
 }
-@media (max-width: 767.98px) {
-  .auth__intro {
-    margin-top: 150px;
-  }
-}
 .auth__intro-next, .auth__intro-logo {
   position: absolute;
   left: 50%;

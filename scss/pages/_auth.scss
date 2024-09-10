@@ -21,10 +21,6 @@
     &__intro {
         position: relative;
 
-        @include abstracts.screen(md) {
-            margin-top: 150px;
-        }
-
         @extend %jusItemCenter;
         align-items: center;
         flex-direction: column;
