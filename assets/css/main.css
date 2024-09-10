@@ -3129,7 +3129,7 @@ html.dark {
 }
 @media (max-width: 767.98px) {
   .auth__text {
-    margin-bottom: 50px !important;
+    padding-bottom: 50px !important;
   }
 }
 .auth__link {

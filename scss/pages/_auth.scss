@@ -154,7 +154,7 @@
         color: var(--auth-text-color);
 
         @include abstracts.screen(md) {
-            margin-bottom: 50px !important;
+            padding-bottom: 50px !important;
         }
     }
 
