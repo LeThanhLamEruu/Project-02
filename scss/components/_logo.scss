@@ -8,6 +8,7 @@
 
     @include abstracts.screen(lg) {
         -webkit-tap-highlight-color: transparent;
+        gap: 10px;
     }
 
     &__img {
@@ -26,5 +27,9 @@
         font-style: normal;
         font-weight: 700;
         line-height: 145.455%;
+
+        @include abstracts.screen(lg) {
+            font-size: 1.8rem;
+        }
     }
 }

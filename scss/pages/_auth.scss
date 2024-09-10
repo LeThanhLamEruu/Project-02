@@ -9,6 +9,10 @@
     display: flex;
     min-height: 100vh;
 
+    @supports (-webkit-touch-callout: none) {
+        min-height: -webkit-fill-available;
+    }
+
     @include abstracts.screen(md) {
         flex-direction: column;
     }
@@ -51,6 +55,11 @@
             font-weight: 500;
             line-height: 144.444%;
             color: var(--auth-text-intro-color);
+
+            @include abstracts.screen(md) {
+                font-size: 1.5rem;
+            }
+
         }
 
         &-img {
@@ -99,6 +108,10 @@
         line-height: 146.667%;
 
         color: var(--auth-text-intro-color);
+
+        @include abstracts.screen(md) {
+            font-size: 2.2rem;
+        }
     }
 
     &__desc {
@@ -110,19 +123,19 @@
         font-weight: 500;
         line-height: 146.667%;
         color: var(--auth-text-color);
+
+        @include abstracts.screen(md) {
+            font-size: 1.4rem;
+        }
     }
 
     &__form {
         width: 100%;
         margin-top: 60px;
-    }
 
-    &__link {
-        font-size: 1.5rem;
-        font-style: normal;
-        font-weight: 500;
-        line-height: 146.667%;
-        color: var(--auth-link-color);
+        @include abstracts.screen(md) {
+            margin-top: 30px;
+        }
     }
 
     &__btn-group {
@@ -143,23 +156,43 @@
 
     &__text,
     &__link {
+        font-size: 1.5rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 146.667%;
+
+        @include abstracts.screen(md) {
+            font-size: 1.4rem;
+        }
+    }
+
+    &__text {
+        color: var(--auth-text-color);
+    }
+
+    &__link {
+        color: var(--auth-link-color);
+    }
+
+    &__text-end,
+    &__link-end {
         font-size: 1.8rem;
         font-style: normal;
         font-weight: 400;
         line-height: 144.444%;
     }
 
-    &__text {
+    &__text-end {
         margin-top: 108px;
-        color: var(--auth-text-color);
-
         @include abstracts.screen(md) {
             padding-bottom: 50px !important;
+            font-size: 1.6rem;
         }
     }
 
-    &__link {
-        font-weight: 500;
-        color: var(--auth-link-color);
+    &__link-end {
+        @include abstracts.screen(md) {
+            font-size: 1.6rem;
+        }
     }
 }
