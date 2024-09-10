@@ -21,17 +21,29 @@
     &__intro {
         position: relative;
 
+        @include abstracts.screen(md) {
+            margin-top: 150px;
+        }
+
         @extend %jusItemCenter;
         align-items: center;
         flex-direction: column;
         gap: 50px;
         padding: 0 30px;
 
+        &-next,
         &-logo {
             position: absolute;
-            top: 80px;
             left: 50%;
             translate: -50%;
+        }
+
+        &-logo {
+            top: 80px;
+        }
+
+        &-next {
+            bottom: 50px;
         }
 
         &-text {
@@ -47,11 +59,6 @@
 
         &-img {
             max-width: 100%;
-            margin-top: 150px;
-        }
-
-        &-next {
-            margin: 200px auto 50px auto;
         }
     }
 
@@ -65,7 +72,7 @@
             position: fixed;
             inset: 0;
             z-index: 1;
-            translate: -100%;
+            translate: 100%;
             transition: translate 0.3s;
         }
 

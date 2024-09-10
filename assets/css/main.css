@@ -3027,11 +3027,21 @@ html.dark {
   gap: 50px;
   padding: 0 30px;
 }
-.auth__intro-logo {
+@media (max-width: 767.98px) {
+  .auth__intro {
+    margin-top: 150px;
+  }
+}
+.auth__intro-next, .auth__intro-logo {
   position: absolute;
-  top: 80px;
   left: 50%;
   translate: -50%;
+}
+.auth__intro-logo {
+  top: 80px;
+}
+.auth__intro-next {
+  bottom: 50px;
 }
 .auth__intro-text {
   max-width: 412px;
@@ -3044,10 +3054,6 @@ html.dark {
 }
 .auth__intro-img {
   max-width: 100%;
-  margin-top: 150px;
-}
-.auth__intro-next {
-  margin: 200px auto 50px auto;
 }
 .auth__content {
   padding: 50px 30px;
@@ -3058,7 +3064,7 @@ html.dark {
     position: fixed;
     inset: 0;
     z-index: 1;
-    translate: -100%;
+    translate: 100%;
     transition: translate 0.3s;
   }
 }
