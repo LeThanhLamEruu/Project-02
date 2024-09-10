@@ -3059,8 +3059,14 @@ html.dark {
     position: fixed;
     inset: 0;
     z-index: 1;
-    translate: 100%;
     transition: translate 0.3s;
+    overflow-y: auto;
+  }
+  .auth__content.hide {
+    translate: 100%;
+  }
+  .auth__content.show {
+    translate: 0;
   }
 }
 .auth__content-inner {
@@ -3120,6 +3126,11 @@ html.dark {
 .auth__text {
   margin-top: 108px;
   color: var(--auth-text-color);
+}
+@media (max-width: 767.98px) {
+  .auth__text {
+    margin-bottom: 50px !important;
+  }
 }
 .auth__link {
   font-weight: 500;

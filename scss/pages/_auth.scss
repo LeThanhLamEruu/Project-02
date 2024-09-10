@@ -68,8 +68,16 @@
             position: fixed;
             inset: 0;
             z-index: 1;
-            translate: 100%;
             transition: translate 0.3s;
+            overflow-y: auto;
+
+            &.hide {
+                translate: 100%;
+            }
+
+            &.show {
+                translate: 0;
+            }
         }
 
         &-inner {
@@ -144,6 +152,10 @@
     &__text {
         margin-top: 108px;
         color: var(--auth-text-color);
+
+        @include abstracts.screen(md) {
+            margin-bottom: 50px !important;
+        }
     }
 
     &__link {

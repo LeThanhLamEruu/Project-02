@@ -27,22 +27,23 @@
     <body>
         <main class="auth">
             <!-- Logo -->
-            <a href="./" class="auth__intro-logo logo d-none d-md-flex">
-                <img src="./assets/icons/logo.svg" alt="groceriesmart" class="logo__img">
-                <h1 class="logo__title">groceriesmart</h1>
-            </a>
+
             <!-- Auth Intro -->
             <div class="auth__intro">
+                <a href="./" class="auth__intro-logo logo d-none d-md-flex">
+                    <img src="./assets/icons/logo.svg" alt="groceriesmart" class="logo__img">
+                    <h1 class="logo__title">groceriesmart</h1>
+                </a>
                 <img src="./assets/imgs/intro/Group 9.svg" alt="" class="auth__intro-img">
                 <p class="auth__intro-text">The best of luxury brand values, high quality products, and innovative
                     services</p>
 
-                <button class="auth__intro-next">
+                <button class="auth__intro-next js-toggle" toggle-target="#auth__content">
                     <img src="./assets/imgs/intro/Frame 11.svg" alt="" class="auth__intro-icon d-none d-md-block">
                 </button>
             </div>
             <!-- Auth Content -->
-            <div class="auth__content">
+            <div id="auth__content" class="auth__content hide">
                 <div class="auth__content-inner">
                     <!-- Logo -->
                     <a href="./" class="logo">
@@ -54,7 +55,7 @@
                     <p class="auth__desc">Let’s create your account and Shop like a pro and save money.</p>
 
                     <!-- Form -->
-                    <form action="" class="form auth__form">
+                    <form action="./index-logined.html" class="form auth__form">
                         <!-- Form 1 -->
                         <div class="form__group">
                             <div class="form__text-input">
@@ -104,6 +105,10 @@
                 </div>
             </div>
         </main>
+
+        <script>
+            window.dispatchEvent(new Event("template-loaded"));
+        </script>
     </body>
 
 </html>
