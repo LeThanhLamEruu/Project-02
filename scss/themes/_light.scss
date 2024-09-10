@@ -48,6 +48,13 @@ html {
     --fillter-color: #9E9DA8;
     --fillter-bg-button: #F8F8FB;
 
+    --auth-bg-color: #fff;
+    --auth-text-color: #9E9DA8;
+    --auth-border-color: #D2D1D6;
+    --auth-link-color: #0071DC;
+    --auth-text-intro-color: var(--text-color);
+    --auth-input-color: var(--text-color);
+
     @include abstracts.screen(md) {
         --header-bg-color: #FFFFFF;
         --cate-item-bg: #fff;

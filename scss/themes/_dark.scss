@@ -50,6 +50,15 @@ html.dark {
     --fillter-color: #9E9DA8;
     --fillter-bg-button: #171C28;
 
+    --auth-bg-color: #292E39;
+    --auth-text-color: #B9BABE;
+    --auth-border-color: var(--auth-text-color);
+    --auth-link-color: #0071DC;
+    --auth-text-intro-color: var(--auth-text-color);
+    --auth-fillter-icon: brightness(0) saturate(100%) invert(82%) sepia(6%) saturate(134%) hue-rotate(191deg) brightness(91%) contrast(90%);
+    --auth-input-color: #fff;
+
+
 
     @include abstracts.screen(md) {
         --header-bg-color: #171C28;

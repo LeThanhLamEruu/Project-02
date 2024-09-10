@@ -17,6 +17,7 @@
     width: 12px;
     height: 16px;
     display: none;
+    margin-top: -10px;
 
     @include abstracts.screen(lg) {
         display: block;
@@ -304,6 +305,14 @@
                 -webkit-tap-highlight-color: transparent;
                 outline: none;
             }
+        }
+    }
+
+    &__sign-up {
+        @include abstracts.screen(md) {
+            height: 40px;
+            padding: 0 8px;
+            font-size: 1.5rem;
         }
     }
 }
