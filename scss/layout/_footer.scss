@@ -118,13 +118,10 @@
         font-weight: 400;
         background: transparent;
         color: var(--text-color);
+        width: 100%;
 
         &::placeholder {
             font-weight: 400;
-        }
-
-        @include abstracts.screen(xl) {
-            width: 100%;
         }
 
         @include abstracts.screen(lg) {

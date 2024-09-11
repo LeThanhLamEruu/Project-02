@@ -1,0 +1,15 @@
+.message {
+    padding: 14px;
+    width: 100%;
+
+    border-radius: 10px;
+    border: 1px solid #056BF2;
+    text-align: left;
+    font-size: 1.5rem;
+    font-weight: 500;
+
+    &--success {
+        background: var(--auth-success-bg);
+        color: var(--auth-text-color);
+    }
+}

@@ -44,6 +44,22 @@
         justify-content: space-between;
         padding: 16px 0;
     }
+
+    &__logo {
+        @include abstracts.screen(lg) {
+            -webkit-tap-highlight-color: transparent;
+            gap: 10px;
+
+            &-img {
+                width: 24px;
+                height: 24px;
+            }
+
+            &-title {
+                font-size: 1.8rem;
+            }
+        }
+    }
 }
 
 .navbar {
@@ -215,8 +231,6 @@
     }
 
     &__arrowd {
-        margin-top: 3px;
-
         @include abstracts.screen(lg) {
             rotate: -90deg;
             transition: rotate 0.3s;

@@ -54,6 +54,9 @@ html {
     --auth-link-color: #0071DC;
     --auth-text-intro-color: var(--text-color);
     --auth-input-color: var(--text-color);
+    --auth-border-color-checkbox: var(--auth-text-color);
+    --auth-intro-bg-color: var(--auth-bg-color);
+    --auth-success-bg: #C2EDFE;
 
     @include abstracts.screen(md) {
         --header-bg-color: #FFFFFF;

@@ -6,19 +6,9 @@
     gap: 14px;
     cursor: pointer;
 
-    @include abstracts.screen(lg) {
-        -webkit-tap-highlight-color: transparent;
-        gap: 10px;
-    }
-
     &__img {
         width: 32px;
         height: 32px;
-
-        @include abstracts.screen(lg) {
-            width: 24px;
-            height: 24px;
-        }
     }
 
     &__title {
@@ -27,9 +17,5 @@
         font-style: normal;
         font-weight: 700;
         line-height: 145.455%;
-
-        @include abstracts.screen(lg) {
-            font-size: 1.8rem;
-        }
     }
 }

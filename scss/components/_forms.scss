@@ -1,8 +1,13 @@
 @use "../abstracts";
 
+$error-color: #ed4337;
 .form {
-    &__group {
+    &:has(:invalid) &__submit-btn {
+        opacity: 0.5;
+        pointer-events: none;
+    }
 
+    &__group {
         + .form__group {
             margin-top: 30px;
         }
@@ -17,6 +22,22 @@
             + .form__group {
                 margin-top: 20px;
             }
+        }
+    }
+
+    &__group:has(:invalid):has(&__input:not(:placeholder-shown)) {
+        .form__text-input {
+            border-color: $error-color;
+            background: rgba($color: $error-color, $alpha: 0.1);
+        }
+
+        .form__error,
+        .form__input-icon--error {
+            display: block;
+        }
+
+        .form__input-icon {
+            display: none;
         }
     }
 
@@ -52,10 +73,32 @@
             color: var(--auth-border-color);
         }
 
-        &-icon {
+        &-icon,
+        &-icon--error {
             margin-left: 12px;
+            width: 20px;
+            height: 18px;
+        }
+
+        &-icon {
             filter: var(--auth-fillter-icon);
         }
+
+        &-icon--error {
+            display: none;
+            animation: shake 0.3s;
+        }
+    }
+
+    &__error {
+        display: none;
+        margin-top: 10px;
+        text-align: left;
+
+        font-size: 1.4rem;
+        font-weight: 500;
+        color: $error-color;
+        user-select: none;
     }
 
     &__pull-right {
@@ -63,20 +106,61 @@
     }
 
     &__checkbox {
+        position: relative;
+
         display: flex;
         align-items: center;
-        gap: 10px;
 
         &-label {
+            margin-left: 29px;
+
             font-size: 1.5rem;
             font-style: normal;
             font-weight: 500;
             line-height: 146.667%;
             color: var(--auth-text-color);
 
+            user-select: none;
+
             @include abstracts.screen(md) {
                 font-size: 1.4rem;
             }
+        }
+
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+            user-select: none;
+        }
+
+        &::before {
+            width: 19px;
+            height: 19px;
+            border-radius: 5px;
+            border: 1.5px solid var(--auth-border-color-checkbox);
+        }
+
+        &::after {
+            display: none;
+            width: 14px;
+            height: 6px;
+            border: 2px solid;
+            border-color: transparent transparent #ffff #ffff;
+            rotate: -45deg;
+            left: 2px;
+            top: 6px;
+        }
+    }
+
+    &__checkbox:has(:checked) {
+        &::before {
+            border-color: #ffb700;
+            background: #ffb700;
+        }
+
+        &::after {
+            display: block;
         }
     }
 }
