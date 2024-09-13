@@ -50,6 +50,10 @@ html.dark {
     --fillter-color: #9E9DA8;
     --fillter-bg-button: #171C28;
 
+    --form-border: #D2D1D6;
+    --form-bg-button: #171C28;
+    --form-color: #9E9DA8;
+
     --auth-bg-color: #292E39;
     --auth-text-color: #B9BABE;
     --auth-border-color: var(--auth-text-color);
@@ -61,8 +65,29 @@ html.dark {
     --auth-intro-bg-color: var(--prod-cart-bg);
     --auth-success-bg: rgb(0 180 253 / 20%);
 
+    --product-page-bg-color: #292E39;
+    --breadcrumbs-bg-color: #171C28;
+    --breadcrumbs-shadow: rgba(23, 28, 40, 0.20);
+    --breadcrumbs-text-color: #9E9DA8;
+
+    --prod-info-btn-bg-color: #f6f6f6;
+    --prod-info-bg-color: #171C28;
+    --prod-info-btn-bg: #292E39;
+
+    --prod-content-text-color: var(--breadcrumbs-text-color);
+    --prod-review-card-bg: #171C28;
+
+    --text-color-ui: #ededf6;
+
     @include abstracts.screen(md) {
         --header-bg-color: #171C28;
+
+        --product-page-bg-color: #292E39;
+        --breadcrumbs-bg-color: #171C28;
+        --prod-info-bg-color: var(--breadcrumbs-bg-color);
+        --prod-preview-bg-color: var(--breadcrumbs-bg-color);
+
+        --search-bar-bg-color: #171C28;
     }
 
     @include abstracts.screen(lg) {

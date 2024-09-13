@@ -56,7 +56,6 @@
         width: 1px;
         height: 162px;
         background: #EEE;
-        margin: 0 30px;
 
         @include abstracts.screen (xl) {
             display: none;
@@ -64,38 +63,15 @@
     }
 
     &__form {
-        margin-top: 30px;
+        margin-top: 20px;
 
-        &-label {
-            display: block;
-            font-size: 2.2rem;
-            font-style: normal;
-            font-weight: 500;
-            line-height: 145.455%;
-            color: var(--text-color);
-
-
-            &--small {
-                margin-bottom: 10px;
-
-                @include abstracts.screen (sm) {
-                    width: 100%;
-                }
-            }
-        }
-
-        &-input,
-        &-select,
-        &-tag,
-        &-label--small {
+        &-input {
             font-size: 1.4rem;
             font-style: normal;
             font-weight: 500;
             line-height: 142.857%;
             color: var(--text-color);
-        }
 
-        &-input {
             border-radius: 0.6rem;
             border: 1px solid var(--fillter-form-border);
             padding: 8px 12px;
@@ -173,71 +149,6 @@
             }
         }
 
-        &-select-wrap {
-            display: flex;
-            align-items: center;
-            height: 45px;
-
-            border-radius: 0.6rem;
-            border: 1px solid var(--fillter-form-border);
-        }
-
-        &-select {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 0 14px;
-            min-width: var(--width, 108px);
-            color: var(--text-color);
-            cursor: pointer;
-            opacity: 1;
-            transition: opacity 0.2s;
-
-            @include abstracts.screen (xl) {
-                flex: 1;
-            }
-
-            @include abstracts.screen (sm) {
-                min-width: var(--width, 100px);
-            }
-
-            &:first-child {
-                border-right: 1px solid var(--fillter-form-border);
-            }
-
-            &:hover {
-                opacity: 0.8;
-            }
-
-            &-icon {
-                width: 24px;
-                height: 24px;
-            }
-        }
-
-        &-tags {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-
-            @include abstracts.screen (sm) {
-                display: grid;
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-
-        &-tag {
-            padding: 6px 12px;
-            color: var(--fillter-color);
-            border-radius: 0.6rem;
-            background: var(--fillter-bg-button);
-            transition: color 0.2s;
-
-            &:hover {
-                color: var(--text-color);
-            }
-        }
-
         &-text-input {
             display: flex;
             align-items: center;
@@ -258,6 +169,10 @@
 
     &__col {
         width: 100%;
+
+        @include abstracts.screen (sm) {
+            margin-top: 20px;
+        }
     }
 
     &__row {

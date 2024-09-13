@@ -48,6 +48,10 @@ html {
     --fillter-color: #9E9DA8;
     --fillter-bg-button: #F8F8FB;
 
+    --form-border: #D2D1D6;
+    --form-bg-button: #F8F8FB;
+    --form-color: #9E9DA8;
+
     --auth-bg-color: #fff;
     --auth-text-color: #9E9DA8;
     --auth-border-color: #D2D1D6;
@@ -58,9 +62,30 @@ html {
     --auth-intro-bg-color: var(--auth-bg-color);
     --auth-success-bg: #C2EDFE;
 
+    --product-page-bg-color: #fff;
+    --breadcrumbs-bg-color: #f6f6f6;
+    --breadcrumbs-shadow: rgba(237, 237, 246, 0.20);
+    --breadcrumbs-text-color: #9E9DA8;
+
+    --prod-info-bg-color: #f6f6f6;
+    --prod-info-btn-bg: #ededf6;
+    --prod-border-card: #B9BABE;
+
+    --prod-content-text-color: var(--breadcrumbs-text-color);
+    --prod-review-card-bg: #fafafd;
+
     @include abstracts.screen(md) {
-        --header-bg-color: #FFFFFF;
+        --header-bg-color: #fff;
         --cate-item-bg: #fff;
+
+        --product-page-bg-color: #fafafd;
+        --breadcrumbs-bg-color: #fff;
+        --prod-info-bg-color: var(--breadcrumbs-bg-color);
+        --prod-preview-bg-color: var(--breadcrumbs-bg-color);
+
+        --search-bar-bg-color: #fff;
+
+        --prod-review-card-bg: #fff;
     }
 
     @include abstracts.screen(lg) {

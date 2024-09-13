@@ -16,6 +16,10 @@ body {
     background: var(--body-bg-color);
 }
 
+* {
+    -webkit-tap-highlight-color: transparent;
+}
+
 .icon {
     filter: var(--icon-color);
 }
@@ -36,7 +40,6 @@ select,
 textarea,
 button,
 input {
-    -webkit-tap-highlight-color: transparent;
     font-family: inherit;
     color: inherit;
     border: none;
@@ -64,4 +67,14 @@ input {
         padding-left: 20px !important;
         padding-right: 20px !important;
     }
+}
+
+i,
+em {
+    font-style: italic;
+}
+
+b,
+strong {
+    font-weight: 600;
 }
