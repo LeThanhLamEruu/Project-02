@@ -18,6 +18,10 @@
         gap: 16px;
     }
 
+    @include abstracts.screen(sm) {
+        gap: 8px;
+    }
+
     &__item {
         display: flex;
         align-items: center;
@@ -25,6 +29,10 @@
 
         &:hover .breadcrumbs__link {
             color: var(--text-color);
+        }
+
+        @include abstracts.screen(sm) {
+            gap: 0;
         }
     }
 

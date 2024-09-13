@@ -2504,6 +2504,11 @@ strong {
     gap: 16px;
   }
 }
+@media (max-width: 575.98px) {
+  .breadcrumbs {
+    gap: 8px;
+  }
+}
 .breadcrumbs__item {
   display: flex;
   align-items: center;
@@ -2511,6 +2516,11 @@ strong {
 }
 .breadcrumbs__item:hover .breadcrumbs__link {
   color: var(--text-color);
+}
+@media (max-width: 575.98px) {
+  .breadcrumbs__item {
+    gap: 0;
+  }
 }
 .breadcrumbs__link {
   font-size: 1.6rem;
