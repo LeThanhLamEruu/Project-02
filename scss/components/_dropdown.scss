@@ -57,6 +57,10 @@
     position: relative;
 
     &__main {
+        border: 1.5px solid #d2d1d6;
+        padding: 8px;
+        border-radius: 8px;
+
         width: var(--main-col-width);
         height: var(--max-height);
         overflow-y: auto;
@@ -163,8 +167,11 @@
     inset: 0 0 0 var(--main-col-width);
     padding-left: var(--inner-padding);
 
-    overflow-y: auto;
+    border: 1.5px solid #d2d1d6;
+    padding: 8px !important;
+    border-radius: 8px;
 
+    overflow-y: auto;
     display: none;
     grid-template-columns: repeat(3, 1fr);
 

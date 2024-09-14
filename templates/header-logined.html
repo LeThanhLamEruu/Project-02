@@ -9,16 +9,12 @@
             <img src="./assets/icons/logo.svg" alt="groceriesmart" class="logo__img  top-bar__logo-img">
             <h1 class="logo__title  top-bar__logo-title">groceriesmart</h1>
         </a>
-
-
         <!-- Navbar -->
         <nav id="navbar" class="navbar hide">
-
             <!-- Reponsive for media - md (back) -->
             <button class="navbar__close-btn js-toggle" toggle-target="#navbar">
                 <img src="./assets/icons/arrowdl.svg" alt="" class="icon navbar__close-icon">
             </button>
-
             <!-- Reponsive for media - md (card) -->
             <a href="#!" class="navbar-btn d-none d-md-flex">
                 <img src="./assets/icons/buy.svg" alt="" class="icon navbar-btn__icon">
@@ -30,11 +26,11 @@
                 <span class="navbar-btn__title">Favorite</span>
                 <span class="navbar-btn__qnt">3</span>
             </a>
-
             <!-- Navbar item -->
             <ul class="navbar__list js-dropdown-list">
                 <!-- Navbar item 1 -->
                 <li class="navbar__item">
+                    <!-- Menu main -->
                     <a href="#!" class="navbar__link">
                         Departments
                         <img src="./assets/imgs/arrowd.png" alt="" class="icon navbar__arrowd">
@@ -59,6 +55,7 @@
                                                 </a>
                                             </h2>
                                             <ul class="menu-column__list js-menu-list">
+                                                <!-- Menu main 1 -->
                                                 <li class="menu-column__item">
                                                     <a href="#!" class="menu-column__link">
                                                         Savings & Featured Shops
@@ -396,8 +393,7 @@
                                                         </div>
                                                     </div>
                                                 </li>
-
-
+                                                <!-- Menu main 2 -->
                                                 <li class="menu-column__item">
                                                     <a href="#!" class="menu-column__link">
                                                         Electronics
@@ -731,8 +727,7 @@
                                                         </div>
                                                     </div>
                                                 </li>
-
-
+                                                <!-- Menu main 2 -->
                                                 <li class="menu-column__item">
                                                     <a href="#!" class="menu-column__link">
                                                         Clothing, Shoes & Accessories
@@ -1064,8 +1059,7 @@
                                                         </div>
                                                     </div>
                                                 </li>
-
-                                                <!-- Menu main -->
+                                                <!-- Menu main n -->
                                                 <li class="menu-column__item">
                                                     <a href="#!" class="menu-column__link">
                                                         Home, Furniture & Appliances
@@ -1129,9 +1123,9 @@
                         </div>
                     </div>
                 </li>
-
                 <!-- Navbar item 2 -->
                 <li class="navbar__item">
+                    <!-- Menu main -->
                     <a href="#!" class="navbar__link">
                         Groceries
                         <img src="./assets/imgs/arrowd.png" alt="" class="icon navbar__arrowd">
@@ -1584,9 +1578,9 @@
                         </div>
                     </div>
                 </li>
-
                 <!-- Navbar item 3 -->
                 <li class="navbar__item">
+                    <!-- Menu main -->
                     <a href="#!" class="navbar__link">
                         Beauties
                         <img src="./assets/imgs/arrowd.png" alt="" class="icon navbar__arrowd">
@@ -2037,32 +2031,172 @@
                 </li>
             </ul>
         </nav>
-
         <!-- Navbar overlay -->
         <div class="navbar__overlay js-toggle" toggle-target="#navbar"></div>
-
-        <!-- Actions -->
+        <!-- Top Actions -->
         <div class="topact">
+            <!-- Button simple -->
             <div class="topact__group topact__group--simple">
                 <button class="topact__btn">
                     <img src="./assets/icons/search.svg" alt="" class="icon topact__icon">
                 </button>
             </div>
-
+            <!-- Button Double -->
             <div class="topact__group">
-                <button class="topact__btn">
-                    <img src="./assets/icons/heart.svg" alt="" class="icon topact__icon">
-                    <span class="topact__title">03</span>
-                </button>
-
+                <!-- Button 1 -->
+                <div class="topact__btn-wrap">
+                    <button class="topact__btn">
+                        <img src="./assets/icons/heart.svg" alt="" class="icon topact__icon">
+                        <span class="topact__title">03</span>
+                        <!-- Dropdown -->
+                        <div class="act-dropdown">
+                            <div class="act-dropdown__inner">
+                                <!-- Drop top -->
+                                <div class="act-dropdown__top">
+                                    <h2 class="act-dropdown__title">You have 3 item(s)</h2>
+                                    <a href="!#" class="act-dropdown__view-all">View all</a>
+                                </div>
+                                <!-- Drop preview -->
+                                <div class="row row-cols-3 gx-2 act-dropdown__list">
+                                    <!-- Cart-preview item 1 -->
+                                    <div class="col">
+                                        <article class="cart-preview-item">
+                                            <div class="cart-preview-item__img-wrap">
+                                                <img src="../assets/imgs/products/prod-1.png" alt=""
+                                                     class="cart-preview-item__img">
+                                            </div>
+                                            <h3 class="cart-preview-item__title">
+                                                Lavazza Coffee Blends
+                                            </h3>
+                                            <span class="cart-preview-item__price">$329.00</span>
+                                        </article>
+                                    </div>
+                                    <!-- Cart-preview item 2 -->
+                                    <div class="col">
+                                        <article class="cart-preview-item">
+                                            <div class="cart-preview-item__img-wrap">
+                                                <img src="../assets/imgs/products/prod-2.png" alt=""
+                                                     class="cart-preview-item__img">
+                                            </div>
+                                            <h3 class="cart-preview-item__title">
+                                                Qualità Oro Mountain
+                                            </h3>
+                                            <span class="cart-preview-item__price">$48.00</span>
+                                        </article>
+                                    </div>
+                                    <!-- Cart-preview item 3 -->
+                                    <div class="col">
+                                        <article class="cart-preview-item">
+                                            <div class="cart-preview-item__img-wrap">
+                                                <img src="../assets/imgs/products/prod-3.png" alt=""
+                                                     class="cart-preview-item__img">
+                                            </div>
+                                            <h3 class="cart-preview-item__title">
+                                                Coffee Beans Espresso
+                                            </h3>
+                                            <span class="cart-preview-item__price">$39.99</span>
+                                        </article>
+                                    </div>
+                                </div>
+                                <div class="act-dropdown__divider"></div>
+                                <!-- Drop checkout -->
+                                <div class="act-dropdown__checkout">
+                                    <a href="#!" class="btn btn--primary btn--rounded act-dropdown__checkout-btn">
+                                        Check Out All
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </button>
+                </div>
+                <!-- Border -->
                 <div class="topact__divider"></div>
-
-                <button class="topact__btn">
-                    <img src="./assets/icons/buy.svg" alt="" class="icon topact__icon">
-                    <span class="topact__title">$65.42</span>
-                </button>
+                <!-- Button 2 -->
+                <div class="topact__btn-wrap">
+                    <button class="topact__btn">
+                        <img src="./assets/icons/buy.svg" alt="" class="icon topact__icon">
+                        <span class="topact__title">$65.42</span>
+                        <!-- Dropdown -->
+                        <div class="act-dropdown">
+                            <div class="act-dropdown__inner">
+                                <!-- Drop top -->
+                                <div class="act-dropdown__top">
+                                    <h2 class="act-dropdown__title">You have 3 item(s)</h2>
+                                    <a href="!#" class="act-dropdown__view-all">View all</a>
+                                </div>
+                                <!-- Drop preview -->
+                                <div class="row row-cols-3 gx-2 act-dropdown__list">
+                                    <!-- Cart-preview item 1 -->
+                                    <div class="col">
+                                        <article class="cart-preview-item">
+                                            <div class="cart-preview-item__img-wrap">
+                                                <img src="../assets/imgs/products/prod-1.png" alt=""
+                                                     class="cart-preview-item__img">
+                                            </div>
+                                            <h3 class="cart-preview-item__title">
+                                                Lavazza Coffee Blends
+                                            </h3>
+                                            <span class="cart-preview-item__price">$329.00</span>
+                                        </article>
+                                    </div>
+                                    <!-- Cart-preview item 2 -->
+                                    <div class="col">
+                                        <article class="cart-preview-item">
+                                            <div class="cart-preview-item__img-wrap">
+                                                <img src="../assets/imgs/products/prod-2.png" alt=""
+                                                     class="cart-preview-item__img">
+                                            </div>
+                                            <h3 class="cart-preview-item__title">
+                                                Qualità Oro Mountain
+                                            </h3>
+                                            <span class="cart-preview-item__price">$48.00</span>
+                                        </article>
+                                    </div>
+                                    <!-- Cart-preview item 3 -->
+                                    <div class="col">
+                                        <article class="cart-preview-item">
+                                            <div class="cart-preview-item__img-wrap">
+                                                <img src="../assets/imgs/products/prod-3.png" alt=""
+                                                     class="cart-preview-item__img">
+                                            </div>
+                                            <h3 class="cart-preview-item__title">
+                                                Coffee Beans Espresso
+                                            </h3>
+                                            <span class="cart-preview-item__price">$39.99</span>
+                                        </article>
+                                    </div>
+                                </div>
+                                <!-- Drop bottom -->
+                                <div class="act-dropdown__bottom">
+                                    <div class="act-dropdown__row">
+                                        <span class="act-dropdown__label">Subtotal</span>
+                                        <span class="act-dropdown__value">$415.00</span>
+                                    </div>
+                                    <div class="act-dropdown__row">
+                                        <span class="act-dropdown__label">Texes</span>
+                                        <span class="act-dropdown__value">Free</span>
+                                    </div>
+                                    <div class="act-dropdown__row">
+                                        <span class="act-dropdown__label">Shipping</span>
+                                        <span class="act-dropdown__value">$10.00</span>
+                                    </div>
+                                    <div class="act-dropdown__row act-dropdown__row--bold">
+                                        <span class="act-dropdown__label">Total Price</span>
+                                        <span class="act-dropdown__value">$425.00</span>
+                                    </div>
+                                </div>
+                                <!-- Drop checkout -->
+                                <div class="act-dropdown__checkout">
+                                    <a href="#!" class="btn btn--primary btn--rounded act-dropdown__checkout-btn">
+                                        Check Out All
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </button>
+                </div>
             </div>
-
+            <!-- User Topact -->
             <div class="topact__user">
                 <img src="./assets/imgs/uifaces.jpg" alt="" class="topact__avatar">
             </div>
