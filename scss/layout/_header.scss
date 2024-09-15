@@ -353,18 +353,8 @@
             content: url(../icons/dropdownarrow.svg);
             position: absolute;
             top: -13px;
-            right: 108px;
+            right: 96px;
             filter: var(--dropdown-arrow-color);
-        }
-
-        &-first {
-            &::before {
-                content: url(../icons/dropdownarrow.svg);
-                position: absolute;
-                top: -13px;
-                right: 90px;
-                filter: var(--dropdown-arrow-color);
-            }
         }
     }
 

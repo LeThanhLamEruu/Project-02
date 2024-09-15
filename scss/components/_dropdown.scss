@@ -29,12 +29,12 @@
             position: absolute;
             top: -13px;
             left: var(--arrow-left-pos);
-            translate: -60%;
+            translate: -50%;
             filter: var(--dropdown-arrow-color)
         }
 
         @include abstracts.screen(lg) {
-            padding: 0 40px;
+            padding: 0 50px;
             border-radius: 0;
             background: transparent;
             box-shadow: none;
