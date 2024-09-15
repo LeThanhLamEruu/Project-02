@@ -79,6 +79,10 @@ html.dark {
 
     --text-color-ui: #ededf6;
 
+    --checkout-page-bg-color: #171C28;
+    --checkout-cart-info-shadow: rgba(23, 28, 40, 0.2);
+    --checkout-border-color: #d2d1d6;
+
     @include abstracts.screen(md) {
         --header-bg-color: #171C28;
 

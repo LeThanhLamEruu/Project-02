@@ -74,6 +74,10 @@ html {
     --prod-content-text-color: var(--breadcrumbs-text-color);
     --prod-review-card-bg: #fafafd;
 
+    --checkout-page-bg-color: #fff;
+    --checkout-cart-info-shadow: rgba(237, 237, 246, 0.2);
+    --checkout-border-color: #d2d1d6;
+
     @include abstracts.screen(md) {
         --header-bg-color: #fff;
         --cate-item-bg: #fff;

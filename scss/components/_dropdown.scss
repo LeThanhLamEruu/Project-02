@@ -57,6 +57,7 @@
 
     &__main {
         border: 1.5px solid #d2d1d6;
+        border-right: none;
         padding: 8px;
         border-radius: 8px;
 
@@ -203,4 +204,13 @@
             margin-top: 22px;
         }
     }
+
+    &:not(.top-menu__main) {
+        border-right: none;
+    }
+}
+
+
+.top-menu__main:has(.sub-menu) .sub-menu {
+    border-left: none;
 }
