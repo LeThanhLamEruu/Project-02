@@ -94,10 +94,9 @@
     padding: 30px 30px 30px 0;
 
     @include abstracts.screen(md) {
-        padding: 10px 10px 10px 0;
-        border-bottom-right-radius: 0;
-        border-right: none;
-        border-bottom: none;
+        padding: 30px 10px 10px 10px;
+        border: 2px solid #9E9DA8;
+        border-radius: 8px;
     }
 
     + .block-content-editer {

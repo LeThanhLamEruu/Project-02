@@ -45,10 +45,6 @@
         transition: color 0.2s;
         white-space: nowrap;
 
-        @include abstracts.screen(md) {
-            font-size: 1.4rem;
-        }
-
         &--current {
             color: var(--text-color);
         }

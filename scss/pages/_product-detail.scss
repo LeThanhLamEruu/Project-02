@@ -186,6 +186,10 @@
         font-style: normal;
         font-weight: 500;
         line-height: 142.857%;
+
+        @include abstracts.screen (md) {
+            padding: 8px;
+        }
     }
 
     &__total-price {

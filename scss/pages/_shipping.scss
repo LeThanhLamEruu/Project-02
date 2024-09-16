@@ -113,17 +113,16 @@
         &-input {
             appearance: none;
             &::before {
-                content: url("../imgs/icon chec/checkbox-checked.svg");
+                content: url("../imgs/icon chec/checkbox-uncheck.svg");
                 display: block;
-                margin-top: -3px;
+                filter: var(--icon-color);
 
             }
 
             &:checked::before {
-                content: url("../imgs/icon chec/checkbox-uncheck.svg");
+                content: url("../imgs/icon chec/checkbox-checked.svg");
                 display: block;
-                margin-top: -3px;
-                filter: var(--icon-color);
+                filter: initial;
             }
         }
     }
