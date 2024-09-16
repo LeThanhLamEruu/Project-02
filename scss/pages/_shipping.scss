@@ -1,0 +1,130 @@
+@use "../abstracts";
+
+.user-address {
+
+    &__top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+
+        @include abstracts.screen (md) {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+
+    &__title {
+        font-size: 1.8rem;
+        font-weight: 500;
+        line-height: 144.444%;
+        color: var(--text-color);
+    }
+
+    &__link,
+    &__message,
+    &__desc {
+        margin-top: 4px;
+        font-size: 1.5rem;
+        line-height: 146.667%;
+        color: var(--text-color);
+    }
+
+    &__link {
+        color: #0071dc;
+    }
+
+    &__message {
+        margin-top: 30px;
+        font-weight: 500;
+    }
+
+}
+
+.address-cart {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+
+    @include abstracts.screen (md) {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    &__left {
+        display: flex;
+        gap: 16px;
+        flex: 1;
+    }
+
+    &__right {
+        align-self: flex-end;
+    }
+
+    &__chosse {
+        align-self: flex-start;
+    }
+
+    &__title {
+        font-size: 1.8rem;
+        font-weight: 500;
+        line-height: 144.444%;
+        color: var(--text-color);
+    }
+
+    &__desc {
+        width: min(520px, 90%);
+        margin-top: 4px;
+        font-size: 1.5rem;
+        line-height: 146.667%;
+        color: var(--text-color);
+    }
+
+    &__list {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        margin-top: 20px;
+        list-style: disc inside;
+        font-size: 1.4rem;
+        line-height: 142.857%;
+        color: var(--text-color);
+
+        @include abstracts.screen (sm) {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 10px;
+        }
+    }
+
+    &__btn {
+        display: flex;
+        align-items: flex-end;
+        gap: 10px;
+        font-size: 1.8rem;
+        line-height: 144.444%;
+        padding-right: 0;
+        color: var(--text-color);
+    }
+
+    &__checkbox {
+        position: relative;
+
+        &-input {
+            appearance: none;
+            &::before {
+                content: url("../imgs/icon chec/checkbox-checked.svg");
+                display: block;
+                margin-top: -3px;
+
+            }
+
+            &:checked::before {
+                content: url("../imgs/icon chec/checkbox-uncheck.svg");
+                display: block;
+                margin-top: -3px;
+                filter: var(--icon-color);
+            }
+        }
+    }
+}

@@ -7,6 +7,31 @@ $error-color: #ed4337;
         pointer-events: none;
     }
 
+    &__row {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        margin: 30px 0;
+
+        > * {
+            flex: 1;
+        }
+
+        &:has(.form__group) .form__group {
+            margin-top: 0;
+            width: 100%;
+        }
+
+        @include abstracts.screen(md) {
+            margin: 20px 0;
+            gap: 20px;
+        }
+
+        @include abstracts.screen(sm) {
+            flex-direction: column;
+        }
+    }
+
     &__group {
         + .form__group {
             margin-top: 30px;
@@ -15,7 +40,6 @@ $error-color: #ed4337;
         &--inline {
             display: flex;
             align-items: center;
-
         }
 
         @include abstracts.screen(md) {
@@ -41,18 +65,38 @@ $error-color: #ed4337;
         }
     }
 
+    &__text-area,
     &__text-input {
         display: flex;
         align-items: center;
-
-        height: 50px;
         padding: 0 12px;
 
         border-radius: 1rem;
         border: 1px solid var(--auth-border-color);
+        border-radius: 10px;
+        width: 100%;
 
         &:focus-within {
             border-color: #77dae6;
+        }
+    }
+
+    &__text-area {
+        height: 100px;
+        padding: 12px;
+
+        &-input {
+            width: 100%;
+            resize: none;
+        }
+    }
+
+    &__text-input {
+        position: relative;
+        height: 50px;
+
+        &--small {
+            height: 42px;
         }
 
         @include abstracts.screen(md) {
@@ -60,6 +104,104 @@ $error-color: #ed4337;
         }
     }
 
+
+    &__select-dialog {
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s, visibility 0.3s;
+
+        position: absolute;
+        background: var(--dialog-bg);
+        box-shadow: 0 0 5px rgba($color: #000000, $alpha: 0.15);
+        padding-bottom: 10px;
+        border: 1px solid #d2d1d6;
+        border-radius: 10px;
+        bottom: 44px;
+        left: 10px;
+
+        max-height: 310px;
+        min-width: 230px;
+        color: var(--text-color);
+        display: flex;
+        flex-direction: column;
+
+        &.show {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        @include abstracts.screen(sm) {
+            position: fixed;
+            inset: 0;
+            border-radius: 0;
+        }
+    }
+
+    &__close-dialog {
+        font-size: 3rem;
+        position: absolute;
+        right: 0;
+        top: 0;
+        padding: 12px 18px;
+        opacity: 0.8;
+    }
+
+    &__search {
+        margin-top: 50px;
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid #d2d1d6;
+        padding: 10px 30px;
+
+        &-input {
+            flex: 1;
+            font-size: 1.6rem;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 144.444%;
+            background: transparent;
+            color: var(--auth-input-color);
+            width: 100%;
+
+
+            &::placeholder {
+                color: var(--auth-border-color);
+            }
+        }
+
+        &-icon {
+            width: 18px;
+            height: 18px;
+        }
+    }
+
+    &__options-list {
+        margin-top: 10px;
+        flex: 1;
+        overflow-y: auto;
+        overscroll-behavior: contain;
+    }
+
+    &__option {
+        marker: none;
+        font-size: 1.4rem;
+        list-style: none;
+        padding: 20px 30px;
+        transition: background-color 0.2s;
+
+        &--current {
+            background: rgba($color: #ffb700, $alpha: 0.5);
+            font-weight: 500;
+        }
+
+        &:not(&--current):hover {
+            background-color: #d2d1d6;
+            cursor: pointer;
+        }
+    }
+
+
+    &__text-area-input,
     &__input {
         flex: 1;
         font-size: 1.8rem;
@@ -68,6 +210,7 @@ $error-color: #ed4337;
         line-height: 144.444%;
         background: transparent;
         color: var(--auth-input-color);
+        width: 100%;
 
         &::placeholder {
             color: var(--auth-border-color);
@@ -88,6 +231,15 @@ $error-color: #ed4337;
             display: none;
             animation: shake 0.3s;
         }
+    }
+
+    input:-webkit-autofill,
+    input:-webkit-autofill:focus,
+    input:-webkit-autofill:active,
+    input:-webkit-autofill:hover {
+        transition: background-color 1s 1000s;
+        -webkit-text-fill-color: inherit;
+        caret-color: var(--text-color);
     }
 
     &__error {

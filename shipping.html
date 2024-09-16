@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Checkout | Groceries Mart</title>
+        <title>Shipping | Groceries Mart</title>
 
         <!-- Favicons -->
         <link rel="apple-touch-icon" sizes="76x76" href="./assets/favicons/apple-touch-icon.png">
@@ -51,7 +51,11 @@
                             <img src="./assets/icons/breadcrumb.svg" alt="" class="breadcrumb__icon">
                         </li>
                         <li class="breadcrumbs__item">
-                            <a href="./checkout.html" class="breadcrumbs__link breadcrumbs__link--current">Checkout</a>
+                            <a href="./checkout.html" class="breadcrumbs__link">Checkout</a>
+                            <img src="./assets/icons/breadcrumb.svg" alt="" class="breadcrumb__icon">
+                        </li>
+                        <li class="breadcrumbs__item">
+                            <a href="./shipping.html" class="breadcrumbs__link breadcrumbs__link--current">Shipping</a>
                             <img src="./assets/icons/breadcrumb.svg" alt="" class="breadcrumb__icon">
                         </li>
                     </ul>
@@ -62,6 +66,101 @@
                         <!-- Column 1 -->
                         <div class="col-8 col-xl-12">
                             <div class="cart-info">
+                                <!-- Times shipping -->
+                                <div class="cart-info__heading">
+                                    1. Shipping, arrives between Mon, May 16—Tue, May 24
+                                </div>
+                                <div class="cart-info__devider"></div>
+                                <!-- Checkout address -->
+                                <div class="user-address">
+                                    <!-- Top -->
+                                    <div class="user-address__top">
+                                        <div class="user-address__topleft">
+                                            <h2 class="user-address__title">Shipping address</h2>
+                                            <span class="user-address__desc">Where should we deliver your order?</span>
+                                        </div>
+                                        <button class="user-address__btn btn btn--primary btn--rounded btn--small js-toggle"
+                                                toggle-target="#add-new-address">
+                                            <img src="./assets/imgs/icon chec/plus.svg" alt=""
+                                                 class="user-address__btn-icon">
+                                            Add a new address
+                                        </button>
+                                    </div>
+                                    <!-- List -->
+                                    <div class="user-address__list">
+                                        <!-- Message -->
+                                        <!-- <p class="user-address__message">
+                                            No address yet.
+                                            <a href="#!" class="user-address__link js-toggle" toggle-target="#add-new-address"> 
+                                                Add a new address
+                                            </a>
+                                        </p> -->
+                                        <!-- Cart Item 1 -->
+                                        <article class="address-cart">
+                                            <!-- Left col -->
+                                            <div class="address-cart__left">
+                                                <div class="address-cart__chosse">
+                                                    <label class="address-cart__checkbox">
+                                                        <input type="checkbox" name=""
+                                                               class="address-cart__checkbox-input">
+                                                    </label>
+                                                </div>
+                                                <div class="address-cart__info">
+                                                    <h3 class="address-cart__title">Jose Natalia</h3>
+                                                    <span class="address-cart__desc">
+                                                        Museum of Rajas, Sylhet Sadar, Sylhet 3100.
+                                                    </span>
+                                                    <ul class="address-cart__list">
+                                                        <li>Shipping</li>
+                                                        <li>Delivery from store</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <!-- Right col -->
+                                            <div class="address-cart__right">
+                                                <button class="btn btn--text address-cart__btn js-toggle"
+                                                        toggle-target="#add-new-address">
+                                                    <img src="./assets/imgs/icon chec/edit.svg" alt=""
+                                                         class="address-cart__btn-icon icon">
+                                                    Edit
+                                                </button>
+                                            </div>
+                                        </article>
+                                        <!-- Cart Item 2 -->
+                                        <article class="address-cart">
+                                            <!-- Left col -->
+                                            <div class="address-cart__left">
+                                                <div class="address-cart__chosse">
+                                                    <label class="address-cart__checkbox">
+                                                        <input type="checkbox" name=""
+                                                               class="address-cart__checkbox-input">
+                                                    </label>
+                                                </div>
+                                                <div class="address-cart__info">
+                                                    <h3 class="address-cart__title">Jose Natalia</h3>
+                                                    <span class="address-cart__desc">
+                                                        Al Hamra City (10th Floor), Hazrat
+                                                        Shahjalal Road, Sylhet, Sylhet, Bangladesh
+                                                    </span>
+                                                    <ul class="address-cart__list">
+                                                        <li>Shipping</li>
+                                                        <li>Delivery from store</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <!-- Right col -->
+                                            <div class="address-cart__right">
+                                                <button class="btn btn--text address-cart__btn js-toggle"
+                                                        toggle-target="#add-new-address">
+                                                    <img src="./assets/imgs/icon chec/edit.svg" alt=""
+                                                         class="address-cart__btn-icon icon">
+                                                    Edit
+                                                </button>
+                                            </div>
+                                        </article>
+                                    </div>
+                                </div>
+                                <div class="cart-info__devider"></div>
                                 <!-- Cart info list -->
                                 <div class="cart-info__list">
                                     <!-- Cart item 1 -->
@@ -309,7 +408,7 @@
                                     <span class="cart-info__row-price">$176.80</span>
                                 </div>
 
-                                <a href="./shipping.html"
+                                <a href="./checkout.html"
                                    class="btn btn--primary btn--rounded cart-info__checkout-btn">
                                     Continue to checkout
                                 </a>
@@ -342,8 +441,9 @@
             load("#footer", "./templates/footer.html")
         </script>
 
-        <!-- Modal -->
-        <div class="modal modal--small hide" id="delete-confirm">
+        <!-- Modal confirm remove-->
+        <div id="delete-confirm" class="modal modal--small hide">
+            <button class="modal__close icon js-toggle" toggle-target="#delete-confirm">&times;</button>
             <div class="modal__content">
                 <div class="modal__text">Do you want to remove this item from shopping cart?</div>
                 <div class="modal__bottom">
@@ -356,6 +456,135 @@
             <div class="modal__overlay js-toggle" toggle-target="#delete-confirm"></div>
         </div>
 
+        <!-- Modal confirm add-->
+        <div id="add-new-address" class="modal hide" style="--content-width: 650px">
+            <!-- Content -->
+            <div class="modal__content">
+                <!-- Form Group-->
+                <form action="" class="forms">
+                    <div class="modal__heading">Add new shipping address</div>
+                    <!-- Body -->
+                    <div class="modal__body">
+                        <div class="form__row">
+                            <!-- Form 1 -->
+                            <div class="form__group">
+                                <label for="name" class="form__label form__label--small">Name</label>
+                                <div class="form__text-input form__text-input--small">
+                                    <input type="text" name="name"
+                                           id="name"
+                                           placeholder="Name"
+                                           class="form__input"
+                                           required
+                                           minlength="2">
+                                    <img src="./assets/icons/warning.svg" alt=""
+                                         class="form__input-icon--error">
+                                </div>
+                                <p class="form__error">Email is not in correct format</p>
+                            </div>
+                            <!-- Form 2 -->
+                            <div class="form__group">
+                                <label for="phone" class="form__label form__label--small">Phone</label>
+                                <div class="form__text-input form__text-input--small">
+                                    <input type="tel" name="phone"
+                                           id="phone"
+                                           placeholder="Phone"
+                                           class="form__input"
+                                           required
+                                           minlength="10">
+                                    <img src="./assets/icons/warning.svg" alt=""
+                                         class="form__input-icon--error">
+                                </div>
+                                <p class="form__error">Phone is not in correct format</p>
+                            </div>
+                        </div>
+                        <!-- Form 3 -->
+                        <div class="form__group">
+                            <label for="address" class="form__label form__label--small">Address</label>
+                            <div class="form__text-area">
+                                <textarea type="address" name="address" id="address"
+                                          placeholder="Address (rea and street)"
+                                          class="form__text-area-input" required minlength="11"></textarea>
+                                <img src="./assets/icons/warning.svg" alt=""
+                                     class="form__input-icon--error">
+                            </div>
+                            <p class="form__error">Address not empty</p>
+                        </div>
+                        <!-- Form 4 -->
+                        <div class="form__group">
+                            <label for="city" class="form__label form__label--small">City/District/Town</label>
+                            <div class="form__text-input form__text-input--small">
+                                <input type="text" name="" id="city"
+                                       placeholder="City/District/Town"
+                                       class="form__input js-toggle" toggle-target="#city-dialog" readonly>
+                                <img src="./assets/icons/warning.svg" alt=""
+                                     class="form__input-icon--error">
+
+                                <div id="city-dialog" class="form__select-dialog hide">
+                                    <div class="form__close-dialog d-none">&times;</div>
+                                    <div class="form__search">
+                                        <input type="text" placeholder="Search"
+                                               class="form__search-input"></input>
+                                        <img src="./assets/icons/search.svg" alt="" class="form__search-icon icon">
+                                    </div>
+                                    <ul class="form__options-list">
+                                        <li class="form__option">Ha Noi</li>
+                                        <li class="form__option form__option--current">Ho Chi Minh</li>
+                                        <li class="form__option">Da Nang</li>
+                                        <li class="form__option">Nha Trang</li>
+                                        <li class="form__option">Can Tho</li>
+                                        <li class="form__option">Da Nang</li>
+                                        <li class="form__option">Nha Trang</li>
+                                        <li class="form__option">Can Tho</li>
+                                        <li class="form__option">Da Nang</li>
+                                        <li class="form__option">Nha Trang</li>
+                                        <li class="form__option">Can Tho</li>
+                                        <li class="form__option">Da Nang</li>
+                                        <li class="form__option">Nha Trang</li>
+                                        <li class="form__option">Can Tho</li>
+                                        <li class="form__option">Da Nang</li>
+                                        <li class="form__option">Nha Trang</li>
+                                        <li class="form__option">Can Tho</li>
+                                        <li class="form__option">Da Nang</li>
+                                        <li class="form__option">Nha Trang</li>
+                                        <li class="form__option">Can Tho</li>
+                                        <li class="form__option">Da Nang</li>
+                                        <li class="form__option">Nha Trang</li>
+                                        <li class="form__option">Can Tho</li>
+                                        <li class="form__option">Da Nang</li>
+                                        <li class="form__option">Nha Trang</li>
+                                        <li class="form__option">Can Tho</li>
+                                        <li class="form__option">Da Nang</li>
+                                        <li class="form__option">Nha Trang</li>
+                                        <li class="form__option">Can Tho</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <p class="form__error">Phone is not in correct format</p>
+                        </div>
+                        <!-- Form 5 -->
+                        <div class="form__group form__group--inline">
+                            <label class="form__checkbox">
+                                <input type="checkbox" name="" id="" class="form__checkbox-input d-none">
+                                <span class="form__checkbox-label">Set as default address</span>
+                            </label>
+                        </div>
+                    </div>
+                    <!-- Button -->
+                    <div class="modal__bottom">
+                        <button class="btn btn--small btn--outline  modal__btn js-toggle"
+                                toggle-target="#add-new-address">
+                            Cancel
+                        </button>
+                        <button class="btn btn--small btn--primary modal__btn js-toggle"
+                                toggle-target="#add-new-address">
+                            Create
+                        </button>
+                    </div>
+                </form>
+            </div>
+            <!-- Overlay -->
+            <div class="modal__overlay"></div>
+        </div>
 
     </body>
 

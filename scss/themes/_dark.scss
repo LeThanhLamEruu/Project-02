@@ -83,6 +83,11 @@ html.dark {
     --checkout-cart-info-shadow: rgba(23, 28, 40, 0.2);
     --checkout-border-color: #d2d1d6;
 
+    --modal-bg: #2f3441;
+    --modal-shadow: rgba(23, 28, 40, 0.4);
+
+    --dialog-bg: #2f3441;
+
     @include abstracts.screen(md) {
         --header-bg-color: #171C28;
 

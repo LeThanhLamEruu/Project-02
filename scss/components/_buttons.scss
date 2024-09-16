@@ -63,6 +63,12 @@
     transition: opacity 0.2s;
     user-select: none;
 
+    white-space: nowrap;
+
+    &--small {
+        height: 40px;
+    }
+
     + .btn {
         &:not(.btn--no-margin) {
             margin-left: 20px;
@@ -70,7 +76,6 @@
     }
 
     &--text {
-        color: #9E9DA8;
         background: transparent;
         font-weight: 400;
     }
@@ -85,7 +90,7 @@
     }
 
     &--rounded {
-        border-radius: 999px;
+        border-radius: 1000px;
     }
 
     &:hover {

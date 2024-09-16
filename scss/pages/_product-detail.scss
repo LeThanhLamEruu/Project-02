@@ -80,7 +80,7 @@
             border-radius: 8px;
             transition: border 0.2s;
             opacity: 0.8;
-            transition: opacity 0.3s, border-color 0.3s;
+            transition: opacity 0.3s, border-color 0.3s, transform 0.3s;
 
             &--current {
                 opacity: 1;
@@ -91,6 +91,7 @@
                 opacity: 1;
                 border-color: #9e9da8;
                 cursor: pointer;
+                transform: translateY(-3px);
             }
         }
     }

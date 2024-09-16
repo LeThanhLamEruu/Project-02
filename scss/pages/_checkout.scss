@@ -29,6 +29,17 @@
         margin-top: 30px;
     }
 
+    &__heading {
+        font-size: 2.4rem;
+        font-weight: 700;
+        line-height: 141.667%;
+        color: var(--text-color);
+
+        @include abstracts.screen (md) {
+            font-size: 2.2rem;
+        }
+    }
+
     &__bottom {
         margin-top: 30px;
     }
@@ -130,6 +141,10 @@
             width: 100px;
             height: 100px;
         }
+
+        @include abstracts.screen (lg) {
+            padding: 0 16px 0 12px;
+        }
     }
 
     &__content {
@@ -218,7 +233,7 @@
         color: var(--text-color);
 
         &-img {
-            margin-top: 4px;
+            display: block;
         }
 
         @include abstracts.screen (md) {
