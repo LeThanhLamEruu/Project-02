@@ -70,6 +70,7 @@
         font-weight: 500;
         line-height: 144.444%;
         color: var(--text-color);
+        margin-bottom: 5px !important;
     }
 
     &__desc {
@@ -86,15 +87,18 @@
         gap: 30px;
         margin-top: 20px;
         list-style: disc inside;
-        font-size: 1.4rem;
-        line-height: 142.857%;
-        color: var(--text-color);
 
         @include abstracts.screen (sm) {
             flex-direction: column;
             align-items: flex-start;
             gap: 10px;
         }
+    }
+
+    &__item {
+        font-size: 1.4rem;
+        line-height: 142.857%;
+        color: var(--text-color);
     }
 
     &__btn {
@@ -114,14 +118,12 @@
             appearance: none;
             &::before {
                 content: url("../imgs/icon chec/checkbox-uncheck.svg");
-                display: block;
                 filter: var(--icon-color);
 
             }
 
             &:checked::before {
                 content: url("../imgs/icon chec/checkbox-checked.svg");
-                display: block;
                 filter: initial;
             }
         }

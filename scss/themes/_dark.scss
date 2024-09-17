@@ -87,6 +87,7 @@ html.dark {
     --modal-shadow: rgba(23, 28, 40, 0.4);
 
     --dialog-bg: #2f3441;
+    --payment-bg: #292e39;
 
     @include abstracts.screen(md) {
         --header-bg-color: #171C28;

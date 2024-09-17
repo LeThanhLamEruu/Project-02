@@ -1,0 +1,97 @@
+@use "../abstracts";
+
+.payment-info {
+    background: var(--payment-bg);
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    border-radius: 20px;
+    margin-top: 30px;
+    padding: 20px;
+
+    @include abstracts.screen (sm) {
+        &:not(&__back) {
+            align-items: flex-start;
+        }
+
+    }
+
+    &__inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex: 1;
+        gap: 20px;
+
+        @include abstracts.screen (sm) {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 14px;
+        }
+    }
+
+    &__chosse {
+        margin-top: 6px;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        flex-direction: row-reverse;
+        align-self: center;
+
+        @include abstracts.screen (sm) {
+            align-self: flex-end;
+        }
+    }
+
+    &__top {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    &__heading {
+        flex: 1;
+
+        @include abstracts.screen (xl) {
+            border: 1px solid #9e9da8;
+            border-radius: 10px;
+            padding: 8px;
+        }
+    }
+
+    &__link {
+        color: #0071dc;
+    }
+
+    &__img {
+        width: 70px;
+        height: 54px;
+        object-fit: cover;
+    }
+
+    &__desc {
+        font-size: 1.8rem;
+        font-weight: 500;
+        line-height: 144.444%;
+        color: #9e9da8;
+    }
+
+    &__back {
+        align-self: center;
+        border: 1px solid #0071dc;
+        border-radius: 8px;
+        padding: 6px 10px;
+    }
+
+    &__btn {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 1.8rem;
+        line-height: 144.444%;
+    }
+}
+
+.address-cart__checkbox-input:checked ~ .payment-info__desc {
+    color: var(--text-color);
+}

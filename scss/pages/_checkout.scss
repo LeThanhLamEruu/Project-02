@@ -29,9 +29,13 @@
         margin-top: 30px;
     }
 
+    &__form {
+        margin-top: 30px;
+    }
+
     &__heading {
-        font-size: 2.4rem;
-        font-weight: 700;
+        font-size: 2.2rem;
+        font-weight: 500;
         line-height: 141.667%;
         color: var(--text-color);
 
@@ -42,6 +46,13 @@
 
     &__bottom {
         margin-top: 30px;
+    }
+
+    &__desc {
+        margin-top: 6px;
+        font-size: 1.5rem;
+        line-height: 146.667%;
+        color: var(--text-color);
     }
 
     &__continue {

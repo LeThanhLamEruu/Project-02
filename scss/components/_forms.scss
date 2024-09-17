@@ -379,6 +379,14 @@ $error-color: #ed4337;
                 width: 100%;
             }
         }
+
+        &--medium {
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+            font-weight: 500;
+            line-height: 144.444%;
+            color: var(--text-color);
+        }
     }
 
     &__select-wrap {

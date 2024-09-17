@@ -82,6 +82,7 @@ html {
     --modal-shadow: rgba(237, 237, 246, 0.2);
 
     --dialog-bg: #fff;
+    --payment-bg: #f6f6f6;
 
     @include abstracts.screen(md) {
         --header-bg-color: #fff;
