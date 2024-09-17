@@ -1,0 +1,67 @@
+@use "../abstracts";
+
+.favourite__group {
+    display: flex;
+    align-items: center;
+    gap: 80px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+
+    @include abstracts.screen (lg) {
+        flex-direction: column;
+        gap: 0px;
+        border: 1px solid #9e9da8;
+        border-radius: 10px;
+        padding: 20px;
+    }
+
+    @include abstracts.screen (sm) {
+        border: none;
+        border-bottom: 1px solid #9e9da8;
+        border-radius: 0;
+        padding: 0;
+
+        &:last-child {
+            border-bottom: none;
+        }
+    }
+}
+
+.favourite__checkbox {
+    flex: 1;
+    border: 1px solid #67b044;
+    border-radius: 10px;
+    padding: 30px 30px;
+    margin-top: 20px;
+
+    @include abstracts.screen (lg) {
+        align-self: flex-end;
+        margin-top: -20px;
+        padding: 10px 20px;
+    }
+
+    @include abstracts.screen (md) {
+        padding: 6px 20px;
+        margin-top: 0;
+    }
+
+    @include abstracts.screen (sm) {
+        align-self: center;
+        margin-bottom: 30px;
+        width: 100%;
+    }
+}
+
+.favourite__article {
+    @include abstracts.screen (lg) {
+        border: none;
+    }
+}
+
+.favourite__input {
+    margin-right: auto;
+}
+
+.favourite__desc {
+    margin-left: auto;
+}

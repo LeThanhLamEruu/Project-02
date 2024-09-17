@@ -196,15 +196,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const updateCheckboxes = (selectedCheckbox) => {
         checkboxes.forEach(checkbox => {
-            if (checkbox !== selectedCheckbox) {
+
+            if (checkbox !== selectedCheckbox && !checkbox.classList.contains('checkbox--more')) {
                 checkbox.checked = false;
 
-                // Đặt lại màu cho phần tử không được chọn
                 const paymentDesc = checkbox.closest('.address-cart__chosse').querySelector('.payment-info__desc');
                 if (paymentDesc) {
                     paymentDesc.style.color = '';
                 }
             } else {
+
                 const paymentDesc = checkbox.closest('.address-cart__chosse').querySelector('.payment-info__desc');
                 if (paymentDesc) {
                     paymentDesc.style.color = checkbox.checked ? 'var(--text-color)' : '';
