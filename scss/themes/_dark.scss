@@ -89,6 +89,9 @@ html.dark {
     --dialog-bg: #2f3441;
     --payment-bg: #292e39;
 
+    --sidebar-profile: #171C28;
+    --account-info-profile: #292E39;
+
     @include abstracts.screen(md) {
         --header-bg-color: #171C28;
 

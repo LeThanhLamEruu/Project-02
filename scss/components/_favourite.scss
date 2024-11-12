@@ -1,0 +1,51 @@
+@use "../abstracts";
+
+.favourite-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    &__thumb {
+        width: 110px;
+        @include abstracts.screen(lg) {
+            width: 80px;
+        }
+    }
+
+    &__title {
+        font-size: 1.5rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 146.667%;
+        color: var(--text-color);
+    }
+
+    &__content {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        margin-top: 15px;
+
+        @include abstracts.screen(sm) {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+
+    &__price {
+        font-size: 2.2rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 145.455%;
+        color: var(--text-color);
+    }
+}
+
+.space-gap {
+    border: 1px solid #D2D1D6;
+    margin: 20px 0;
+}
+
+.cart-info-profile {
+    margin-bottom: 50px;
+}

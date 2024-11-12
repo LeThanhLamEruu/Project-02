@@ -84,6 +84,9 @@ html {
     --dialog-bg: #fff;
     --payment-bg: #f6f6f6;
 
+    --sidebar-profile: #fff;
+    --account-info-profile: #f6f6f6;
+
     @include abstracts.screen(md) {
         --header-bg-color: #fff;
         --cate-item-bg: #fff;
