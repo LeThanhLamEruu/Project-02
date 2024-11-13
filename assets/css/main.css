@@ -5310,6 +5310,11 @@ html.dark {
 .form-card__button-link {
   color: var(--text-color);
 }
+@media (max-width: 767.98px) {
+  .form-card__button {
+    margin-bottom: 20px;
+  }
+}
 
 .card-profile__back-arrow {
   width: 50px;
