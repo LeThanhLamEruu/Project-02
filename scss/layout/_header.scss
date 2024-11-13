@@ -308,6 +308,14 @@
         background: var(--topact-divider);
     }
 
+    &__user {
+        position: relative;
+
+        &:hover .act-dropdown {
+            display: block;
+        }
+    }
+
     &__avatar {
         display: block;
 
@@ -428,6 +436,80 @@
         font-size: 1.8rem;
         color: #1A162E;
     }
+}
+
+.topact-dropdown {
+    right: 0;
+    display: none;
+    width: min(300px, 100vh);
+
+    &__inner {
+        &::before {
+            content: url(../icons/dropdownarrow.svg);
+            position: absolute;
+            top: -13px;
+            right: 16px;
+            filter: var(--dropdown-arrow-color);
+        }
+    }
+}
+
+.user-menu {
+    color: var(--text-color);
+
+    &__top {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+
+    &__avatar {
+        width: 60px;
+        height: 60px;
+        border-radius: 10px;
+        object-fit: cover;
+    }
+
+    &__group {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__name {
+        font-weight: 600;
+        font-size: 1.8rem;
+        margin-bottom: 8px;
+    }
+
+    &__list {
+        margin-top: 30px;
+
+        &:last-child {
+            margin-bottom: 20px;
+        }
+    }
+
+    &__item {
+        margin-top: 20px;
+
+        &-mode {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        &-icon {
+            rotate: -90deg;
+        }
+    }
+}
+
+
+.topact__space-i {
+    height: 1px;
+    background-color: #d2d1d6;
+    margin-top: 20px;
+    margin-bottom: -10px;
 }
 
 .btn-rese {

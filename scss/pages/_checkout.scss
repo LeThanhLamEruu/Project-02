@@ -38,6 +38,9 @@
     }
 
     &__heading {
+        display: flex;
+        align-items: center;
+
         font-size: 2.2rem;
         font-weight: 500;
         line-height: 141.667%;
@@ -49,6 +52,9 @@
     }
 
     &__bottom {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
         margin-top: 30px;
     }
 
