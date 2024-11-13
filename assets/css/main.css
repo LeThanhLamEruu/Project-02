@@ -4864,6 +4864,11 @@ html.dark {
   color: var(--text-color);
 }
 
+.icon-arrow-edit-more {
+  rotate: 360deg;
+  margin-top: 2px;
+}
+
 .user-address__top {
   display: flex;
   align-items: center;
