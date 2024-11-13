@@ -2486,6 +2486,9 @@ strong {
   width: 100%;
 }
 .form__text-area-input::placeholder, .form__input::placeholder {
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 400;
   color: var(--auth-border-color);
 }
 .form__text-area-input-icon, .form__text-area-input-icon--error, .form__input-icon, .form__input-icon--error {
@@ -4626,8 +4629,6 @@ html.dark {
 }
 .cart-info__bottom {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
   margin-top: 30px;
 }
 @media (max-width: 767.98px) {
@@ -4717,10 +4718,6 @@ html.dark {
   .cart-item {
     padding: 16px 0;
   }
-  .cart-item:last-child {
-    border-bottom: none;
-    padding-bottom: 0;
-  }
 }
 .cart-item__thumb {
   width: 172px;
@@ -4799,23 +4796,19 @@ html.dark {
 .cart-item__ctrl-btn {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 6px;
   color: #9e9da8;
   font-size: 1.6rem;
   font-weight: 500;
   line-height: 150%;
   min-height: 44px;
 }
-@media (max-width: 575.98px) {
-  .cart-item__ctrl {
-    flex-direction: column;
-  }
-}
 .cart-item__input {
   display: flex;
   align-items: center;
   gap: 10px;
   height: 44px;
+  max-width: 115px;
   padding: 0 20px;
   border-radius: 10px;
   border: 1px solid #d2d1d6;
@@ -4825,17 +4818,7 @@ html.dark {
   color: var(--text-color);
 }
 .cart-item__input-img {
-  display: block;
-}
-@media (max-width: 767.98px) {
-  .cart-item__input {
-    font-size: 1.4rem;
-  }
-}
-@media (max-width: 575.98px) {
-  .cart-item__input {
-    justify-content: space-between;
-  }
+  display: inline-block;
 }
 .cart-item__total-price {
   font-size: 2.2rem;
@@ -5081,72 +5064,84 @@ html.dark {
   color: var(--text-color);
 }
 
-.favourite__group {
+.cart-item__content-edit {
   display: flex;
   align-items: center;
-  gap: 80px;
-  margin-top: 20px;
-  margin-bottom: 10px;
+  gap: 20px;
+}
+
+.cart-favourite__content {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  align-items: stretch;
 }
 @media (max-width: 991.98px) {
-  .favourite__group {
+  .cart-favourite__content {
     flex-direction: column;
-    gap: 0px;
-    border: 1px solid #9e9da8;
-    border-radius: 10px;
-    padding: 20px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .cart-item__favourite {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.favourite-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+@media (max-width: 991.98px) {
+  .favourite-group {
+    flex-direction: row;
+    align-items: center;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    gap: 30px;
   }
 }
 @media (max-width: 575.98px) {
-  .favourite__group {
-    border: none;
-    border-bottom: 1px solid #9e9da8;
-    border-radius: 0;
-    padding: 0;
-  }
-  .favourite__group:last-child {
-    border-bottom: none;
+  .favourite-group {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 10px;
+    margin-bottom: 20px;
   }
 }
 
 .favourite__checkbox {
-  flex: 1;
+  display: flex;
+  align-items: center;
   border: 1px solid #67b044;
   border-radius: 10px;
-  padding: 30px 30px;
-  margin-top: 20px;
+  padding: 5px 10px;
 }
 @media (max-width: 991.98px) {
   .favourite__checkbox {
-    align-self: flex-end;
-    margin-top: -20px;
-    padding: 10px 20px;
-  }
-}
-@media (max-width: 767.98px) {
-  .favourite__checkbox {
-    padding: 6px 20px;
-    margin-top: 0;
-  }
-}
-@media (max-width: 575.98px) {
-  .favourite__checkbox {
-    margin-bottom: 30px;
+    align-self: flex-start;
   }
 }
 
-@media (max-width: 991.98px) {
-  .favourite__article {
-    border: none;
-  }
-}
-
+.favourite__desc,
 .favourite__input {
-  margin-right: auto;
+  margin-top: 4px;
 }
 
-.favourite__desc {
-  margin-left: auto;
+.cart-info__favourite {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 40px;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 767.98px) {
+  .btn-checkout-favourite {
+    width: 100%;
+  }
 }
 
 .profile-container {
@@ -5306,6 +5301,7 @@ html.dark {
   align-items: center;
   justify-content: flex-end;
   margin-top: 30px;
+  margin-bottom: 10px;
 }
 .form-card__button-link {
   color: var(--text-color);

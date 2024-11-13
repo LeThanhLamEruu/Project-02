@@ -1,65 +1,79 @@
 @use "../abstracts";
 
-.favourite__group {
+.cart-item__content-edit {
     display: flex;
     align-items: center;
-    gap: 80px;
-    margin-top: 20px;
-    margin-bottom: 10px;
+    gap: 20px;
+}
+
+.cart-favourite__content {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    align-items: stretch;
 
     @include abstracts.screen (lg) {
         flex-direction: column;
-        gap: 0px;
-        border: 1px solid #9e9da8;
-        border-radius: 10px;
-        padding: 20px;
+    }
+}
+
+.cart-item__favourite {
+    @include abstracts.screen (md) {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+
+.favourite-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @include abstracts.screen (lg) {
+        flex-direction: row;
+        align-items: center;
+        margin-top: 30px;
+        margin-bottom: 20px;
+        gap: 30px;
     }
 
     @include abstracts.screen (sm) {
-        border: none;
-        border-bottom: 1px solid #9e9da8;
-        border-radius: 0;
-        padding: 0;
-
-        &:last-child {
-            border-bottom: none;
-        }
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 10px;
+        margin-bottom: 20px;
     }
 }
 
 .favourite__checkbox {
-    flex: 1;
+    display: flex;
+    align-items: center;
+
     border: 1px solid #67b044;
     border-radius: 10px;
-    padding: 30px 30px;
-    margin-top: 20px;
+    padding: 5px 10px;
 
     @include abstracts.screen (lg) {
-        align-self: flex-end;
-        margin-top: -20px;
-        padding: 10px 20px;
-    }
-
-    @include abstracts.screen (md) {
-        padding: 6px 20px;
-        margin-top: 0;
-    }
-
-    @include abstracts.screen (sm) {
-        margin-bottom: 30px;
+        align-self: flex-start;
     }
 }
 
-.favourite__article {
-    @include abstracts.screen (lg) {
-        border: none;
-    }
-}
-
+.favourite__desc,
 .favourite__input {
-    margin-right: auto;
+    margin-top: 4px;
 }
 
-.favourite__desc {
-    margin-left: auto;
+.cart-info__favourite {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 40px;
+    margin-bottom: 10px;
+}
+
+.btn-checkout-favourite {
+    @include abstracts.screen (md) {
+        width: 100%;
+    }
 }

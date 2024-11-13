@@ -251,6 +251,9 @@ $error-color: #ed4337;
         width: 100%;
 
         &::placeholder {
+            font-size: 1.6rem;
+            font-style: normal;
+            font-weight: 400;
             color: var(--auth-border-color);
         }
 

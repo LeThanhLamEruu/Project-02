@@ -54,8 +54,6 @@
 
     &__bottom {
         display: flex;
-        align-items: center;
-        justify-content: space-between;
         margin-top: 30px;
 
         @include abstracts.screen (md) {
@@ -152,11 +150,6 @@
 
     @include abstracts.screen (md) {
         padding: 16px 0;
-
-        &:last-child {
-            border-bottom: none;
-            padding-bottom: 0;
-        }
     }
 
     &__thumb {
@@ -238,25 +231,22 @@
         &-btn {
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 6px;
             color: #9e9da8;
             font-size: 1.6rem;
             font-weight: 500;
             line-height: 150%;
             min-height: 44px;
         }
-
-        @include abstracts.screen (sm) {
-            flex-direction: column;
-        }
     }
 
     &__input {
         display: flex;
         align-items: center;
-
         gap: 10px;
+
         height: 44px;
+        max-width: 115px;
         padding: 0 20px;
         border-radius: 10px;
         border: 1px solid #d2d1d6;
@@ -266,18 +256,8 @@
         color: var(--text-color);
 
         &-img {
-            display: block;
+            display: inline-block;
         }
-
-        @include abstracts.screen (md) {
-            font-size: 1.4rem;
-        }
-
-        @include abstracts.screen (sm) {
-            justify-content: space-between;
-        }
-
-
     }
 
     &__total-price {
