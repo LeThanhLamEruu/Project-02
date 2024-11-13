@@ -27,6 +27,7 @@
 
     @include abstracts.screen (sm) {
         padding: 20px;
+        padding-top: 40px;
     }
 
     + .cart-info {
@@ -56,6 +57,12 @@
         align-items: center;
         justify-content: space-between;
         margin-top: 30px;
+
+        @include abstracts.screen (md) {
+            margin-top: 0;
+            margin-bottom: 20px;
+            justify-content: flex-end;
+        }
     }
 
     &__desc {
@@ -125,6 +132,11 @@
 
     &__checkout-btn {
         margin-top: 30px;
+        margin-bottom: 10px;
+
+        @include abstracts.screen (sm) {
+            margin-bottom: 10px;
+        }
     }
 }
 

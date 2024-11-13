@@ -46,9 +46,7 @@
     }
 
     @include abstracts.screen (sm) {
-        align-self: center;
         margin-bottom: 30px;
-        width: 100%;
     }
 }
 
